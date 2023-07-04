@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<!-- -> 부가적인 내용을 담는다 head와 body -->
+<!-- 어떤문서에도 꼭 써야한다 -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 한글이 지원되는 코드 -->
+    <title>박준홍의 이력서</title>
+    <!-- 제목 정하는 것 -->
+    <link rel="stylesheet" href="codelion.css">
+    <!-- link tag를 통해 css파일을 호출 -->
+</head>
+
+<body>
+    <!-- div는 divsion의 줄임말 영역을 표현 -->
+    <!-- class를 이용하여 개별 tag에 대하여 이름 부여 -->
+    <div class="mainbox">
+        <h1>박준홍</h1>
+        <p>HTML/CSS 개발자</p>
+        <section>
+            <h2>ABOUT ME</h2>
+            <p class="about-me-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis beatae ipsa eligendi ad rerum ducimus
+                recusandae, iste veritatis est blanditiis dolorum amet neque possimus quis? Sit asperiores praesentium
+                laborum assumenda?
+                Dolor eum praesentium aliquam provident magni nesciunt fugit assumenda consequuntur ratione rerum
+                voluptate perspiciatis non, repellendus dignissimos veniam iste ipsum ipsa eveniet voluptas, natus a? Ut
+                quibusdam dignissimos aliquam facilis.
+                Quis, commodi. Aperiam, obcaecati pariatur culpa laudantium dolorum sapiente non repellat et aspernatur.
+                Dolore tenetur ullam sunt? Error iusto doloribus cumque ut impedit id labore esse, sit dolorum numquam
+                facilis.
+            </p>
+        </section>
+        <!-- div와 section은 똑같다. div를 연속적으로 쓰는 것보다 section을 같이써주면 코드 가독성이 조금 나아진다. article또한 section과 같다. -->
+        <section>
+            <h2>EXPERIENCE</h2>
+            <div class="float-wrap">
+                <p class="title-text">Awesome Programming Company</p>
+                <p class="year-text">2020 - Now</p>
+            </div>
+            <p class="desc-text">Front-End Web Developer</p>
+            <p class="desc-subtext">HTML/CSS,JS,React,...</p>
+            <div class="float-wrap">
+                <p class="title-text">Ministry of Health</p>
+                <p class="year-text">2015 - 2017</p>
+            </div>
+            <p class="desc-text">UX/UI Designer</p>
+            <p class="desc-subtext">Web design</p>
+            <div class="float-wrap">
+                <p class="title-text">Freelance Work</p>
+                <p class="year-text">2015 - 2017</p>
+            </div>
+            <p class="desc-text">UX/UI Designer</p>
+            <p class="desc-subtext">Web design</p>
+        </section>
+
+        <section>
+            <h2>ACTIVITIES</h2>
+            <div class="float-wrap">
+                <p class="title-text">Front-End Web Developer Forum Volunteer</p>
+                <p class="year-text">2019 - 2020</p>
+            </div>
+            <p class="desc-text">Application Page Development</p>
+            <p class="desc-subtext">Lorem ipsum dolor sit amet.</p>
+            <div class="float-wrap">
+                <p class="title-text">LIKELION SEOUL</p>
+                <p class="year-text">2017 - 2018</p>
+            </div>
+            <p class="desc-text">Teacher in Mutsa University</p>
+            <p class="desc-subtext">Lorem ipsum dolor sit amet.</p>
+            <div class="float-wrap">
+                <p class="title-text">Open Source Committer</p>
+                <p class="year-text">2011 - 2013</p>
+            </div>
+            <p class="desc-text">Angular JS</p>
+            <p class="desc-subtext">Lorem ipsum dolor sit amet.</p>
+        </section>
+
+        <section>
+            <h2>EDUCATION</h2>
+            <div class="float-wrap">
+                <p class="title-text">Mutsa University</p>
+                <p class="year-text">2008 - 2012</p>
+            </div>
+            <p class="desc-text">Computer Science and Engineering</p>
+            <div class="float-wrap">
+                <p class="title-text">Mutsa High school</p>
+                <p class="year-text">2006 - 2008</p>
+            </div>
+            <p class="desc-text">Visual Communication Design</p>
+            <div class="float-wrap">
+                <p class="title-text">Online Programming Academy</p>
+                <p class="year-text">2006 - 2007</p>
+            </div>
+            <p class="desc-text">Python Course</p>
+        </section>
+
+        <section>
+            <h2>AWARDS</h2>
+            <div class="float-wrap">
+                <p class="title-text">LIKELION SEOUL</p>
+                <p class="year-text">2018</p>
+            </div>
+            <p class="desc-text">Best Developer Award</p>
+        </section>
+        <div class="sns-wrap">
+            <a href="http://facebook.com"><img class="sns-img" src="images/facebook.png"></a>
+            <a href="http://twitter.com"><img class="sns-img" src="images/twitter.png"></a>
+            <a href="http://insta.com"><img class="sns-img" src="images/insta.png"></a>
+            <a href="http://linkedin.com"><img class="sns-img" src="images/linked-in.png"></a>
+            <!-- a 태그를 이용하여 href에 도메인 주소를 넣어주면 img클릭시, 해당 주소로 접속 -->
+        </div>
+        <!-- img는 src로 경로를 입력하면 사진을 출력해준다. -->
+    </div>
+    <footer>copyright CODE LION. All rights reserved.</footer>
+    <!-- footer가 p태그랑 다를게 없다. -->
+</body>
+
+</html>

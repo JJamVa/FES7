@@ -1,0 +1,112 @@
+/* html파일에 css를 사용해도 되나 분리하는게 가장 보기가 좋다. */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap');
+/* margin border padding content 순서(밖->안) */
+
+* {
+    font-family: 'Montserrat';
+}
+/* *는 문서 전체를 의미 */
+body,h1{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    min-width: fit-content;
+}
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    /* bold는 글자를 굵게, italic은 글자를 기울어지게 */
+}
+/* padding은 박스 글자의 거리가 멀어진다. */
+/* border의 px값 + width값 */
+h2{
+    font-size: 20px;
+    text-align: left;
+    font-weight: lighter;
+    color: #282828;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 16px;
+    padding-bottom: 5px;
+}
+/* .은 class를 의미 */
+body footer{
+    background-color: #919191;
+    text-align: center;
+    /* 글자 정렬 방식 */
+    /* html color code를 통하여 색상을 확인한다. */
+    color : #1E1E1E;
+    /* 간단하게 색깔을 입력해도 되지만 더 섬세하게 색을 표현하고 싶으면 # + 6자리의 코드로 색상을 표현 */
+}
+.mainbox{
+    border : 1px solid black;
+    /* border 작성 순서는 두께 방식 색깔 */
+    width : 610px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    padding: 100px;
+    box-shadow: 5px 5px 0px 1px rgba(0, 0, 0, 0.1);
+    /* box-shadow는 박스의 그림자를 넣는 문법이다. */
+    /* 1:x축 2: y축 3: 그림자의 흐림 4: 그림자의 퍼짐 5번째 그림자의 색깔 r,g,b,a는 투명도 0.1은 10%  r,g,b의 범위는 0 ~ 255*/
+}
+section{
+    margin-bottom: 24px;
+
+}
+.name-text{
+    font-size:16px;
+    color: #7c7c7c;
+    font-weight: bold;
+}
+.about-me-text{
+    font-size: 10px;
+    line-height: 16px;
+    text-align: left;
+}
+.title-text{
+    font-size:11px;
+    font-weight: bolder;
+    color: #282828;
+    float: left;
+    /* float를 이용하여 한줄에서 left로 왼쪽, right로 오른쪽 구석으로 붙인다. */
+}
+.year-text{
+    font-size: 11px;
+    font-weight: bolder;
+    text-align: right;
+    color: #282828;
+    float: right;
+}
+.float-wrap{
+    overflow: hidden;
+    /* overflow:hidden으로 float을 한 것을 겹치지않게 해준다. */
+}
+
+.desc-text{
+    font-size: 9px;
+    text-align:left;
+}
+.desc-subtext{
+    font-size: 9px;
+    color: #282828;
+    padding-left: 16px;
+    text-align: left;
+}
+.title-box{
+    text-align:right;
+}
+.sns-img{
+    width: 12px;
+    height: 12px;
+}
+footer {
+    text-align: center;
+    background-color: #1e1e1e;
+    padding: 20px;
+    font-size: 12px;
+    color: #919191;
+}
+/* float를 통해서 줄이 갈라진 형태를 한줄로 바꿔줄 수 있다. 겹치는 대신 다른 요소들이 겹칠수가 있다. */
