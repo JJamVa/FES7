@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap');
+
+*{
+    font-family: "Montserrat";
+}
+body {
+    min-width: fit-content;
+    background: url(../img/lion1.jpg);
+}
+.result{
+    background-size: 150px;
+    background: url(../img/lion2.jpg);
+}
+h1,h3{
+    text-align: center;
+}
+h2{
+    text-align: right;
+}

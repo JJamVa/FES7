@@ -1,0 +1,11 @@
+p{
+    padding-left: 20px;
+}
+div *{
+    text-align: left;
+}
+.content{
+    border: 1px dotted black;
+    font-size: 15px;
+    background-color: rgb(195, 233, 248);
+}

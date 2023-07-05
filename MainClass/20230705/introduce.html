@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박준홍 자기소개서</title>
+    <link rel="stylesheet" href="./css/title.css">
+    <link rel="stylesheet" href="./css/box.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <!-- <link rel="stylesheet" href="./css/content.css"> -->
+    <!-- 위의 content.css파일이 있지만 link를 할 필요가 없다. box.css에 content.css파일 @import하였기 때문이다. -->
+    <!-- 링크 방식 css파일을 만들어 경로를 연결해주는 방식 
+    만약 link 태그가 여러개이고 같은 태그의 디자인을 변경하고 싶을 때,
+    html의 라인이 더 밑에 있는 link태그가 적용이 된다.
+    파일을 분리함으로써 유지보수와 태그에 대한 재사용성이 좋아진다.-->
+    <style>
+        blockquote strong {
+            color: red;
+        }
+        /* style 태그를 이용하여 태그 내부를 css코드로 작성
+        inline 방식보다 깔끔하고 재사용이 가능하다.
+        코드가 길어질수록 비효율적일 수 있다. */
+    </style>
+</head>
+
+<body>
+    <h1>자기소개서</h1>
+    <h2>박준홍</h2>
+    <section class="box">
+        <h3>자기 소개</h3>
+        <section class="content">
+            <p><strong>이름:</strong> 박준홍</p>
+            <p><strong>나이:</strong> 27세<sub>(만 25세)</sub></p>
+            <!-- sub 태그로 기본 글자보다 살짝 아래로 둔다. sup은 기본 글자보다 위에 둔다. -->
+            <p><strong>이메일:</strong> hongi97@naver.com</p>
+            <p><strong>최종학력:</strong> 숭실대학교 AI융합학부</p>
+            <p><strong>Git Hub:</strong> <a href="https://github.com/JJamVa">https://github.com/JJamVa</a></p>
+            <!-- a태그의 href 속성값에 주소를 넣고 클릭 시, 주소로 이동한다. 
+            주소 뿐만이 아닌 파일 경로 입력 시, 파일을 가져온다.-->
+            <p><strong>장래희망:</strong> FE Developer & Fintech Developer</p>
+            <p><strong>원하는 회사 및 기업:</strong> KaKao FE개발자, IBK기업은행, 신한은행 등</p>
+        </section>
+    </section>
+
+    <section class="box">
+        <h3>좋아하는 명언</h3>
+        <section class="content">
+            <div>
+                <blockquote>
+                    수십 번 넘어져도 젊음을 무기 삼아 도전하라 <br>
+                    뜨거운 열정보다 <strong>중요한 것은 지속적인 열정</strong>이다
+                </blockquote>
+                <!-- 긴 인용문을 사용할 때, blockquote 태그를 사용합니다. -->
+                <cite>- 저커 버그의 말 중</cite>
+                <!-- cite 태그는 저작물의 출처를 표기할 때 사용
+                제목을 반드시 포함해야됨.-->
+            </div>
+            <blockquote>
+        </section>
+    </section>
+
+    <section class="box">
+        <h3>멋쟁이 사자처럼 프론트엔드 스쿨에서 이루고 싶은 목표</h3>
+        <section class="content">
+            <!-- pre 태그는 p태그에서 연속적인 띄어쓰기 등 공간적인 제약을 받지않고
+            원하는 대로 입력하면 작성하는대로 표현이 된다. -->
+            <pre>
+ 현재 프론트엔드 개발자에 대하여 꿈을 꾸고 있지만 현저히 FE 개발자가 되기에는 부족한 실력입니다. 
+프론트엔드 스쿨 이전에도 어떻게 프론트엔드 공부를 해야하는지, 어떤 것을 해야하는지 많이 고민을 했지만 쉽게 해결할 수가 없었습니다.
+하지만 이번 멋쟁이 사자처럼 프론트엔드 스쿨을 통해 현업에서도 스스로 개발할 수 있는 프론트엔드 개발자가 되고싶습니다.
+프론트엔드 뿐만이 아닌 추후에 백엔드 공부를 하여 <mark style="background-color:greenyellow">풀스택 개발자</mark>가 되는 것이 목표입니다.
+            </pre>
+            <!--<mark>태그는 inline 방식을 이용하여 css에 적용하기
+            재사용성이 떨어진다. 한줄에 한번씩만 적용이 된다.
+            태그 안에 style속성을 이용하여 css문법을 넣어주면된다.  
+            자주 사용하지않는다.-->
+        </section>
+    </section>
+
+    <section class="box">
+        <h3>멋쟁이 사자처럼 프론트엔드 스쿨에서 하고싶은 프로젝트</h3>
+        <section class="content">
+            <div>
+                <p>1. Fintech와 관련된 프로젝트</p>
+                <p>희망하는 직종 중 하나는 금융권입니다. 특히 Fintech와 InsurTech 분야에 관심이 있어 학습을 했었다.<br> 특히, Auth기능 및 공공API 데이터를 이용하여 홈페이지 구축 작업을 해보고싶습니다. 기회가 된다면 프로젝트 경험을 해보고 싶습니다.</p>
+            </div>
+            <wbr>
+            <!-- wbr 태그는 br태그와 같다. 기능이 나온지 얼마되지않아 실질적으로 많이 사용이 되지는 않는다.
+            
+            -->
+            <div>
+                <p>2. 실제 상용화 되는 홈페이지를 제작하는 프로젝트</p>
+                <p>주제에 중점을 두는 목표보다는 실제로 이용자가 많은 홈페이지를 탐색 후, 유사 주제로 홈페이지를 제작하고 싶습니다.<br>프로젝트를 통하여 실무와 같이 실제 서비스를 해보며
+                프론트엔드와 이 외의 지식을 쌓고 싶습니다.
+                </p>
+            </div>
+        </section>
+    </section>
+    <footer style="text-align:center;">
+        <button class="cancle" type="button">취소</button>
+        <button class="check" type="button" onclick="location.href='result.html'">제출하기</button>
+    </footer>
+</body>
+
+</html>

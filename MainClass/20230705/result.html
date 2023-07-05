@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- html Living Standard 문서
+어떤 모드 페이지를 렌더링 할건지 결정
+작성 시 완전 표준 모드 렌더링 -->
+<html lang="ko">
+<!-- 문서 최상단 요소
+lang으로 언어를 선택 ko만 적어도되나 ko-KR로 적어도 OK
+ex) 언어코드(소문자)-국가코드(대문자) -->
+<head>
+<!-- 문서 정보(메타데이터)를 담는다.
+제목, 파비콘(아이콘), 뷰포트 정보 -->
+    <meta charset="UTF-8">
+    <!-- meta란? 어떤 목적을 위해 만들어진 데이터
+    charset="UTF-8"로 전 세계적인 언어들을 지원
+    어떤 언어라도 읽어낼수있음. 국제적인 코드 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 브라우저 호환성을 위한 코드 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- name은 문서 레벨 메타데이터를 제공
+    content는 실제 메타데이터의 요소
+    형태는 이름-쌍
+    위의 구문은 뷰포터에 대한 정보를 입력(화면 설정, 확대,축소 etc) -->
+    <link rel="stylesheet" href="./css/title.css">
+    <title></title>
+    <!-- 브라우저의 제목 표시줄이나 페이지 탭을 보여준다.
+    60자를 넘으면 안된다. -->
+</head>
+<body class="result">
+    <!-- body태그는 이용자들에게 보여지는 부분이다.
+    즉, 우리가 코딩을 하고 서비스를 해야하는 부분이다. -->
+    <p style="text-align: center; padding-top:auto; padding-bottom:auto; font-size:100px">제출해주셔서 <br>감사합니다.</p>
+</body>
+</html>
