@@ -1,0 +1,8 @@
+@import url(./css/002.css);
+/* @import는 최상단에 있어야된다.
+CSS의 종속성, 깔끔하다는 것이 장점
+그러나 CSS파싱과 같이 작업 속도가 증가하기 때문에 성능 측면에서 단점
+CSS 파일을 합치거나 분할 등 작업하는데 시간요소가 조금 걸린다. */
+p{
+    background-color: skyblue;
+}

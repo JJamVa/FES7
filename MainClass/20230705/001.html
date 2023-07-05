@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        p{
+        color: salmon
+        }
+        /* style 태그를 이용하여 태그 내부를 css코드로 작성
+        inline 방식보다 깔끔하고 재사용이 가능하다.
+        코드가 길어질수록 비효율적일 수 있다. */
+    </style>
+    <link rel="stylesheet" href="./001.css">
+    <!-- 링크 방식 css파일을 만들어 경로를 연결해주는 방식 
+    만약 link 태그가 여러개이고 같은 태그의 디자인을 변경하고 싶을 때,
+    html의 라인이 더 밑에 있는 link태그가 적용이 된다.
+    파일을 분리함으로써 유지보수와 태그에 대한 재사용성이 좋아진다.-->
+</head>
+<body>
+    <p class="hi" style="color:red; background-color: yellow;">Hello World</p>
+     <!--inline 방식을 이용하여 css에 적용하기
+    재사용성이 떨어진다. 한줄에 한번씩만 적용이 된다.
+    태그 안에 style속성을 이용하여 css문법을 넣어주면된다.  
+    자주 사용하지않는다.-->
+    <h1 class="hi">Hello World</h1>
+
+</body>
+</html>
