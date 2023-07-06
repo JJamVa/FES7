@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+* {
+    font-family: 'Noto Serif KR', serif;
+    /* Noto Serif KR을 사용하는데 연결이 되지않거나 다운을 받지않았을 경우, 다음 serif를 사용하면 된다. */
+}
+@font-face {
+    font-family: 'PCP';
+    /* font-family를 가져다 쓰면된다.
+    이름 변경시, 변경된 이름으로 폰트를 사용해도된다. */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+/* font-face */
+body{
+    color:aqua
+}
+h1{
+    color: red;
+}
+strong{
+    border-bottom: 1px solid currentColor;
+    /* currentColor로 상속관계에서 상속관계이면 부모의 설정 값을 물려받는다. */
+}
+h2{
+    color:#999;
+    font-family: 'Pretendard-Regular';
+    /* 개발자모드에서 LightHouse를 이용하여 접근성 테스트를 하여 적절한지 확인 받을 수 있다. */
+}
+.peace{
+    font-family: "PCP";
+}
+/* body안에 p가 있고, p안에 strong이 있다. */

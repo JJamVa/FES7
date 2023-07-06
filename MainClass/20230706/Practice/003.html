@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>각종 문장 수정 해보기</title>
+    <style>
+        p::first-letter {
+            text-transform: uppercase;
+            /* 선택자를 보면 저렇게 해서 p태그 첫번째 글자에만 반영이 가능하다. */
+        }
+        p {
+            font-weight: 400;
+            /* 다운 받은 폰트 weight link에 추가된 값에 근접값으로 변한다.
+            */
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            /* 행간의 글자 간격(위 아래) */
+            letter-spacing: 10px;
+            /* 글자간의 간격 */
+            word-spacing: 5px;
+            /* 단어 사이의 간격 */
+            text-indent: 10px;
+            background-color: blueviolet;
+            /* 문단 첫째줄 들여쓰기 */
+            text-align: justify;
+            /* justify는 문단양쪽 정렬이다. */
+
+
+            /* 한줄 말줄임 */
+            /* white-space: nowrap; */
+            /* 말줄임 처리 nowrap은 감싸지않는다.*/
+            /* overflow: hidden; */
+            /* 박스를 넘었을 경우 아예 지워버린다. */
+            /* text-overflow: ellipsis; */
+            /* 말이 넘친 것을 ...으로 처리한다. 
+            white-space와 overflow, text-overflow를 한번에 처리하는 것이 가장 좋은 것 같다.*/
+
+            /* 여러 말줄임 */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            /* 외울필요없다. snippet 설정을 하면 좋다.(ell로 설정 완료.) */
+
+            font-style: italic;
+        }
+
+        .fes7 {
+            text-transform: capitalize;
+            /* text-transform은 글자를 대문자(uppercase), 소문자(lowercase), 첫글자(capitalize), 변화없음(none)로 설정이 가능  */
+            /* text-decoration: orange underline wavy 3px; */
+            /* 색상 줄위치 줄상태 크기 */
+
+            text-decoration-color: orange;
+            text-decoration-line: underline overline;
+            text-decoration-style: underline;
+            /* wavy는 물결이다. dotted은 점선. underline은 밑줄 online 글 위의 줄이 생성된다. */
+            text-decoration-thickness: 2px;
+            /* 위의 코드를 분리하면 밑의 코드와 같이 변형이 가능하다. */
+        }
+        .tx-shadow{
+            text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.5), 0px -5px 3px rgba(0,255,0,0.5);
+            /* x축, y축, 번짐값, 색상 
+            중첩으로 효과도 가능하다!*/
+        }
+        #box-shadow{
+            box-shadow: 1px 1px 3px 4px rgba(0,255,0,0.5);
+            /* 박스또한 가능! */
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="box-shadow">
+        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, accusantium odio excepturi eius atque
+            quidem, aperiam ratione necessitatibus illo officiis, repellendus at. Eius maiores ducimus ipsum sapiente
+            explicabo, cum atque.</p>
+        <p class="fes7">Frontend School</p>
+        <p class="tx-shadow">Text Shadow</p>
+    </div>
+</body>
+
+</html>

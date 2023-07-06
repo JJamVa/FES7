@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록 태그 연습</title>
+    <style>
+        ol {
+            /* list-style-position: inside; */
+            /* li 태그안에 div로 감싸고 있는 문자가 들어가있을 경우 순서는 그대로지만 내용이 한줄 넘어간다.
+            반면 outside를 작성했을 경우 정상적인 작동이 가능하다. */
+            /* list-style: none; */
+            /* 앞의 순서 번호를 없앤다. */
+            /* padding: 0; */
+            /* ol에 padding 0을 하는 순간 앞에 숫자들이 왼쪽으로 넘어간다. */
+        }
+
+        ul {
+            /* list-style-position: inside; */
+            /* ul에서 사용시 li와 다중 중첩한 태그들은 정상작동되지 않는다. */
+            list-style: square;
+            /* 숫자로 구성되어 있는 리스트가 아니기에 각각의 모양 코드를 넣으면 동작한다.
+            ex) circle... */
+            /* list-style: none; */
+            /* padding: 0; */
+        }
+
+        li {
+            background-color: aqua;
+            /* 앞에 ol의 숫자나 ul의 모양들은 포함이 되지 않는다. */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Emmit 문법 ol>li{리스트}*3 하고 tap을 누르면 생성된다.-->
+    <ol>
+        <!-- <li type="a">리스트</li>  -->
+        <!-- 위와 같은 구문은 한줄만 알파벳으로 표시-->
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>
+            <div>
+                리스트
+            </div>
+        </li>
+        <!-- <li>
+            <li>리스트</li>   이런 코드를 작성 시, 순서는 다 작동하지만 부모 li태그는 내용 없이 나온다.
+        </li> -->
+    </ol>
+
+    <ul>
+        <li>리스트</li>
+        <li>리스트</li>
+        <div>
+            <li>리스트</li>
+        </div>
+        <li>
+            <div>리스트</div>
+        </li>
+        <!-- <div>리스트</div> 이 코드는 앞에 dot이 표현이 되지 않는다. -->
+        <li>리스트</li>
+        <li>리스트</li>
+    </ul>
+
+    <dl>
+        <div>
+            <dt>프론트엔스 스쿨 5기</dt>
+            <!-- dt태그는 왼쪽에 붙어있고 -->
+            <dd>조용하지만 강한 사람들이 모인 곳.</dd>
+            <!-- dd는 tap한것과 같이 보여진다. -->
+        </div>
+        <div>
+            <dt>프론트엔스 스쿨 7기</dt>
+            <dd>열정이 넘치고 귀여운 사람들이 모인 곳.</dd>
+        </div>
+        <div><dt>프론트엔스 스쿨 8기</dt></div>
+        <div><dd>열정이 넘치고 귀여운 사람들이 모인 곳.</dd></div>
+        <dt><div>프론트엔드 스쿨 9기</div></dt>
+        <dd><div>파이팅!</div></dd>
+    </dl>
+    <!-- dt, dd 태그는 묶어서 사용가능 어떻게 써도 상관이 없다.-->
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+    <style>
+        p::before {
+            content: 'Hello';
+            /* p 태그 전에 실행 
+            <p>전 실행*/
+        }
+
+        p::after {
+            content: '반갑습니다. ';
+            /* p 태그 후에 살행 
+            </p>후 실행*/
+        }
+
+        input::before {
+            content: "어떤것을 원하시나요?";
+        }
+        img::before{
+            content:"12345";
+        }
+        img::after{
+            content:"12345";
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <strong>안녕하세요.</strong>
+        <strong>안녕하세요.</strong>
+        <strong>안녕하세요.</strong>
+        <strong>안녕하세요.</strong>
+        <strong>안녕하세요.</strong>
+    </p>
+
+    <img src="../../20230705/img/lion1.jpg">
+    <!-- img 태그 같은경우 src의 아무값을 입력하지 않았을 때, 적용이 가능하나 이미지가 있는 경우에는 적용이 되지 않는다. -->
+    <input type="text">
+    <!-- input, button은 ::before , ::after 의 가상요소 영향을 받지 않는다. -->
+</body>
+
+</html>

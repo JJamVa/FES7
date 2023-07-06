@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스</title>
+    <style>
+        a{
+            color:skyblue;
+            text-decoration: none;
+            /* text-decoration은 하이퍼링크 밑에 줄에 대한 권한을 설정한다. default로 underline이 설정되어있다.
+            이외에 none이나 overline이 있다. */
+            transition: all 12s;
+            /* transation은 이벤트를 발생 시, 필요한 시간을 의미한다.
+            예를들어 all 12s이면 a 태그에 대한 모든 이벤트가 시작과 끝나는 과정이 12초가 걸린다.*/
+        }
+        a:visited{
+            color:red;
+            /* 방문 여부를 나타내는 가상 클래스다. 최초 한번이상의 방문시 default 색상으로 보라색이다. */
+        }
+        a:active{
+            background-color: black;
+            font-size: 1.5em;
+            /* 이 가상클래스는 내가 클릭 하는 순간부터 클릭이 끝나는 순간 까지 처리하는 클래스다. */
+            /* :focus와 유사하다. 하지만 다르다. */
+        }
+        a:focus{
+            background-color: salmon;
+            font-size: 0.5em;
+            /* 클릭을 한번하면 바로 이벤트가 발생한다. */
+            /* :active는 클릭 유지, focus는 클릭 시 발생 */
+        }
+        a:hover{
+            font-size: 4em;
+            /* 내가 해당하는 영역에 접근 시, 이벤트가 발생하는 클래스이다. */
+        }
+    </style>
+</head>
+<body>
+    <a href="//www.naver.com">네이버</a>
+    <a href="//www.samsung.com">삼성</a>
+    <!-- href에 https는 적어주지 않아도 동작하는데 지장이 없다. -->
+    <a href="123123123">???</a>
+</body>
+</html>

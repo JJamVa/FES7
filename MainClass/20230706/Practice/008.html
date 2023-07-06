@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수 root</title>
+    <style>
+        :root {
+            --main-color: rgb(160, 182, 220);
+            --pane-padding: 4px 40px;
+            /* 미리 값들을 정해놓은 것이다.
+            협업을 할 때, 디자이너가 정해놓은 색상을 가져다가 쓴다고 생각하면 된다. */
+        }
+
+        .color1 {
+            --point-color: red;
+            /* color1의 class가 색깔을 가져갈 때, 사용 */
+        }
+
+        .color2 {
+            --point-color: yellow;
+        }
+
+        p {
+            color: var(--main-color);
+            /* :root의 값을 사용하기 위해서는 var()을 사용해야한다. */
+        }
+
+        button {
+            color: var(--main-color);
+            border: 1px solid var(--main-color);
+            padding: var(--pane-padding);
+            background-color: var(--point-color);
+            /* --point-color를 각 class별로 지정을 해
+            class에 맞게 값을 적용할 수 있다. */
+        }
+    </style>
+</head>
+
+<body>
+    <p>안녕하세요.</p>
+    <button>버튼</button>
+    <div class="color1">
+        <p>안녕하세요.</p>
+        <button>버튼</button>
+    </div>
+    <div class="color2">
+        <p>안녕하세요.</p>
+        <button>버튼</button>
+    </div>
+</body>
+
+</html>

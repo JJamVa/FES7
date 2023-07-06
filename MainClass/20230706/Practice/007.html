@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조적 가상 선택자</title>
+    <style>
+        ol:first-child {
+            color: red;
+            /* 위와 밑은 다르다. 이 코드는 ol의 첫번째 자식의 자식이 변한다. */
+        }
+
+        ol :first-child {
+            color: blue;
+            /* ol의 첫번째 자손 전부를 바꾼다. ' '의 차이 */
+        }
+
+        li:nth-child(even) {
+            color: aqua;
+            /* li의 태그 중 index가 짝수이면 작동
+            even말고 odd도 가능하며, n값을 다항식으로 만들어 작동도 가능하다. */
+        }
+
+        li:last-child {
+            color: green;
+            /* li태그의 마지막 index만 적용된다. */
+        }
+
+        div :nth-of-type(3) {
+            color: violet;
+            /* div태그 자식 중 연속된 태그들 중 n(3)번째 인덱스의 값을 변환한다. */
+        }
+
+        div :only-of-type {
+            background-color: skyblue;
+            /* div태그의 자손 중 유일한 하나의 태그만 색이 변한다. */
+        }
+
+        li {
+            background-color: #eee;
+            /* li 태그의 영역 확인. 앞의 숫자는 포함되지 않는다. */
+        }
+
+        li:not(:first-child) {
+            background-color: black;
+            /* li 태그 중에 첫번째 자식이 아닌 것에 대하여 효가fmf 를 준다. */
+        }
+
+        p:not(.b), strong:not(.str) {
+            background-color: red;
+            /* p 태그 중 클래스 "b"가 아니면 전부 효과를 적용
+            strong태그 중 str클래스가 아니면 적용 */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="a">안녕</p>
+        <p class="a">안녕</p>
+        <p class="a">안녕</p>
+        <p class="a">안녕</p>
+        <p class="b">안녕</p>
+        <p class="b">안녕</p>
+        <p class="b">안녕</p>
+        <p class="b">안녕</p>
+    </div>
+    <hr>
+    <div>
+        <p>하이!</p>
+        <p>하이!</p>
+        <p>하이!</p>
+        <em>심심하다!</em>
+        <strong>안녕~</strong>
+        <strong class="str">방가방가</strong>
+        <a href="#">a 태그</a>
+        <a href="#">a 태그</a>
+        <a href="#">a 태그</a>
+    </div>
+    <hr>
+    <!-- hr 태그는 구분선 기능을 한다. -->
+    <ol class="ol-style">
+        <li>리스트
+            <ol>
+                <li>ol li</li>
+                <li>ol li</li>
+            </ol>
+        </li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+    </ol>
+</body>
+
+</html>

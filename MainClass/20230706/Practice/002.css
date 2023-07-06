@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'PR';
+    src: url('../font/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+font-family: PR, 'Times New Roman', Dotum, '돋움', sans-serif;
+}
+  /* font-case를 url로 받아온 후, font-family의 이름을 내가 원하는 이름으로 바꿔도 동작한다. */
+
+.c1{
+    font-size: 2rem;
+    /* rem과 em을 실행 시켜보면 크기가 똑같다. 하지만 다르다.
+    무슨 차이가 있을까?
+    rem은 최상위 태그인 html 태그의 font-size 기준인 16px이다. 즉 2rem은 16 * 2인 32px이다.
+    em은 만일 값을 지정하지 않는다면, 부모요소의 font-size값을 상속(inherit)을 받고, 그 기준으로 값을 측정한다.
+     */
+}
+
+.c2{
+    font-size: 2px;
+}
+.c3{
+    font-size: 2em;
+}
+.parents{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    font-size: 100px;
+}
+.child{
+    width: 50vw;
+    height: 50vw;
+    /* vw단위를 이용하여 화면의 박스를 개발자 모드로 확인 해보니 가로 세로 50% 인것을 확인 할 수가 있다. 
+    view의 확률을 나타내주는 것이다.
+    나의 컴퓨터 기준에서 컨텐츠 가로가 1201이고 margin의 길이가 8 * 2이다.
+    더하면 1217의 길이가 나온다.
+    class child영역에 해당된 태그를 그림으로 확인 해보니 608.5가 나왔다. 50vx는 50%이니 1217의 50%가 608.5인 것이다.*/
+    font-size: 0.5em;
+    background-color: salmon;
+    /* box를 찍어보면 크기가 계속 절반씩 줄어든다. 상위 부모에서 값을 0.5를 계속 곱한 값이 나온다.
+    즉 em은 부모의 font-size에 영향을 받는다고 볼 수 있다. */
+}
+/* html{
+    font-size: 10px;
+}
+p{
+    font-size: 4rem;
+} */
+/* html, p 태그에 대해서 다시 공부해야할것 같음. 
+font-size변경 후에 rem을 이용했음에도 불구하고 값을 잘못 확인하고 있음.*/
