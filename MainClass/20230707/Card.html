@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Roboto Condensed', sans-serif;
+            width: 100px;
+            height: 100px;
+            margin-top: 30px;
+        }
+
+        .card1 {
+            width: 200px;
+            height: 100px;
+            border-radius: 100px;
+            background: linear-gradient(90deg, #e66465, #9198e5, #7225ad);
+            border: 3px dashed gray;
+            background-clip: padding-box;
+            /* background-clip으로 밖의 선을 padding안쪽으로 넣어준다. */
+        }
+
+        .card2 {
+            width: 200px;
+            height: 100px;
+            border-radius: 0 100px 100px 100px;
+            background-color: white;
+            border: 1px solid gray;
+            background-clip: padding-box;
+            box-shadow: 3px 3px 5px 1px gray;
+            /* box-shadow를 이용하여 box의 그림자를 만들어준다.
+            x축,y축, 그림자의 번짐 정도, 그림자 영역*/
+        }
+
+        .card3 {
+            width: 200px;
+            height: 100px;
+            background: #343F50;
+            border: 2px solid #000;
+            box-shadow: 2px 2px 0 0 #4A5568 inset;
+            /* inset은 박스 안으로 선을 만들어준다. */
+            background-clip: padding-box;
+        }
+
+        p {
+            padding-top: 40px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card1" style="clear:both">
+        <p>JJamVa ✌</p>
+    </div>
+    <div class="card2">
+        <p>JJamVa ✌</p>
+    </div>
+    <div class="card3">
+        <p>JJamVa ✌</p>
+    </div>
+</body>
+
+</html>
