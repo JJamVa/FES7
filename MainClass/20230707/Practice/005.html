@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        .box1{
+            background-color: skyblue;
+            width:100%;
+            height: 200px;
+            border: 10px solid black;
+            box-sizing: border-box;
+            /* box-sizing을 통해 기존에 width + border * 2 인 120인데,
+             border의 값을 포함하여 width값을 만들어준다. */
+
+            /* width:100%;
+            height:100%; */
+            /* width는 100%가 가능하나, height는 100%가 불가능하다. 
+            기준을 해줄 높이 값을 적용하면된다.
+            하지만 만일에 body를 제외한 다른 태그로 둘러쌓여있을 경우,
+            부모의 높이 값을 기준으로 %를 사용하면 적용이 된다.*/
+            padding: 40px 30px 20px 10px;
+            /* 위 오른쪽 아래 왼쪽 순 */
+            margin: 40px;
+        }
+        .box2{
+            background-color: gold;
+        }
+        span{
+            margin:50%;
+        }
+        .box3{
+            width:100px;
+            height: 100px;
+            background-color: salmon;
+            margin: 0px auto;
+            /* margin auto를 하면 가운데(가로) 정렬이 된다. 세로 정렬은 되지않는다. */
+            /* browser을 크기 줄인다면 viewport 기반으로 값이 조정된다. */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        box
+        <div class="box2">
+            <span>box</span>
+            <!-- width,height값은 적용이 되지않음. margin, padding 또한 좌우에 대해 적용(상하 적용x) -->
+        </div>
+    </div>
+    <div class="box3">
+        box
+    </div>
+</body>
+
+</html>

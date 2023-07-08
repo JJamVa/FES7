@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./002.css">
+    <style>
+        p#id1 {
+            color: salmon;
+        }
+
+        div #id {
+            color: green;
+        }
+
+        p {
+            color: black !important;
+            /* !important를 이용하여 최우선 순위를 둔다.
+            강력한 기능이다. 하지만 권장하진 않는다.*/
+        }
+
+        #id {
+            color: blue;
+        }
+
+        .class {
+            color: yellow;
+        }
+
+        #id.class.class1 {
+            /* .class.class1 과 .class .class1은 완전 다른 것이다. */
+            color: brown;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="./002.css"> -->
+    <!-- link의 위치에 따라 또 달라진다.
+    만일 style밑에 link 태그를 호출한다면 적용될 수도 있다. -->
+</head>
+
+<body>
+    <div>
+        <p id="id" class="class">
+            1. 이 글자는 어떤 색일까요?
+            <!-- green -->
+        </p>
+        <p id="id" class="class class1">
+            2. 이 글자는 어떤 색일까요?
+            <!-- brown -->
+        </p>
+        <p id="id" class="class" style="color:red">
+            3. 이 글자는 어떤 색일까요??
+            <!-- red -->
+        </p>
+        <!-- 정답은  !important가 없다는 전제에 답을 적은 것은 맞다.
+        !important를 적용시 전부 검정색이다.-->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box margin 병합현상 확인</title>
+    <style>
+        .box1,
+        .box2,
+        .box3 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1 {
+            background-color: royalblue;
+            margin: 40px;
+        }
+
+        .box2 {
+            background-color: salmon;
+            margin: 20px;
+            /* 확인해보면 20px이라고 나오지만 실제로는 40px이 간격이 나온다. 
+            이 현상을 margin 병합 현상이라고 한다.*/
+        }
+
+        .box3 {
+            background-color: gold;
+            margin: 60px;
+        }
+        span{
+            background-color: slateblue;
+            margin:20px;
+            /* span을 보면 좌우에서는 margin 병합현상이 발생하지 않는다. */
+        }
+        .parent{
+            background-color: skyblue;
+            /* border: 1px solid transparent; */
+            /* 투명화 처리로 공간을 확보. 권장하지는 않음*/
+            /* padding:20px; */
+            /* padding 작업으로 처리할 수 있다. */
+            position: relative;
+            overflow: hidden;
+            /* overflow로도 해결할수 있지만 버그가 발생할 경우가 있다. */
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color: slateblue;
+            margin: 20px;
+            /* 부모 안의 자식 요소에서 margin을 했을 경우, 위 아래가 margin 값이 적용되지 않는다. */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        box1
+    </div>
+    <div class="box2">
+        box2
+    </div>
+    <!-- margin값이 제일 큰쪽만 적용. 좌우 margin은 상관 없음. -->
+    <div class="box3">
+        box3
+    </div>
+    <span>안녕</span><span>안녕</span><span>안녕</span>
+
+    <div class="parent">
+        <div class="child">child</div>
+        <div class="tool tip">툴팁에 대한 컨텐츠</div>
+    </div>
+</body>
+
+</html>

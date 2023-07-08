@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모양 만들어보기</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: slateblue;
+        }
+
+        .box1 {
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            /* border-radius: 50px 50px 50px 50px; */
+            /* border-radius: 50px; */
+            border-radius: 50%;
+            /* 위의 코드는 width와 height의 값에 따라 모양이 달라진다. 
+            px과 %단위는 고려해야한다.*/
+        }
+
+        .width2 {
+            width: 200px;
+            border-radius: 50px;
+        }
+
+        .box2 {
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            /* border-radius: 10px 10px 10px 10px; */
+            border-radius: 10%;
+        }
+
+        .box3 {
+            text-align: center;
+            border-radius: 100px 0px 0px 0px;
+            /* border-radius: 80px 20px 20px 100px; */
+        }
+
+        .box4 {
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            border-radius: 100% 0 100% 0;
+            /* border-radious: 100% 0% 해도 같다 */
+        }
+
+        .box5 {
+            text-align: center;
+            background-color: violet;
+            border-radius: 0% 100% 0% 100%;
+            /* border-radius: 0% 100% */
+        }
+
+        .box6 {
+            text-align: center;
+            border-radius: 0% 50%;
+        }
+
+        .box7 {
+            text-align: center;
+            height: 50px;
+            border-radius: 50px 50px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        Box
+    </div>
+    <div class="box1 width2">
+        Box
+    </div>
+    <div class="box2">
+        Box
+    </div>
+    <div class="box3">
+        Box
+    </div>
+    <div class="box4">
+        Box
+    </div>
+    <div class="box5">
+        Box
+    </div>
+    <div class="box6">
+        Box
+    </div>
+    <div class="box7">
+        Box
+    </div>
+</body>
+
+</html>

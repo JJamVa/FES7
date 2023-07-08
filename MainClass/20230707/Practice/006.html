@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>width</title>
+    <style>
+        p {
+            background: pink;
+        }
+
+        .max-content {
+            width: max-content;
+        }
+
+        /* 한줄로 표현한다. 다만 viewport를 동작하여도 보여지는 부분은 동일하다. */
+        /* viewport로 화면을 축소를 해도 화면에서 잘린다. */
+
+        .min-content {
+            width: min-content;
+        }
+
+        /* 최소한의 크기를 유지하며, 세로로 일정한 크기로 보여준다.*/
+        /* 한글같은 경우 한글자씩 세로로 표현이 된다. */
+        /* 영어는 글자별로가 아닌 단어별로 정렬이 된다. */
+
+
+        .fit-content {
+            width: fit-content;
+        }
+        /* 화면에 맞게 사이즈를 가변한다. viewport동작시, 내용이 길어질수록 세로로 커진다. */
+
+
+        .parent {
+            width: 500px;
+            background: gray;
+        }
+
+        .parent p {
+            width: 200px;
+            margin: auto;
+        }
+        /* viewport를 변경해도 화면에서 잘린부분을 변형해주지않는다. */
+    </style>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo molestias animi error nobis ut sapiente magni
+        ipsa
+        eaque eveniet voluptatibus illo alias ex, at aut enim pariatur, tenetur harum obcaecati?
+    </p>
+    <p class="max-content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo molestias animi error nobis ut sapiente magni
+        ipsa
+        eaque eveniet voluptatibus illo alias ex, at aut enim pariatur, tenetur harum obcaecati?
+    </p>
+    <p class="min-content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ratione a officia laboriosam et cupiditate ex.
+        Placeat atque temporibus aperiam quae eligendi nostrum nemo, rem ab vel quo modi nihil!
+    </p>
+
+    <p class="min-content">
+        세종대왕 만세!
+    </p>
+    <p class="fit-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eum placeat tenetur ipsa, quibusdam ea in quasi ullam maxime amet dolorum veniam nesciunt animi recusandae tempora provident? Rem, quisquam inventore.
+    </p>
+
+    <p class="fit-content">
+        Lorem ipsum dolor sit, 안녕하세요.
+    </p>
+
+    <div class="parent">
+        <p>Lorem ipsum dolor sit</p>
+    </div>
+
+</body>
+
+</html>

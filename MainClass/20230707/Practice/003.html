@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            background-color: #efefef;
+            border: 1px solid skyblue;
+            /* 인라인 요소에는 width, height가 적용이 안됨.
+            block 요소는 적용이 된다. */
+            padding: 0;
+            margin: 20px;
+            /* 인라인 요소가 적용되긴하나 margin는 위,아래는 적용이 되지않음. */
+        }
+
+        body {
+            padding: 0;
+        }
+
+        div,
+        span {
+            border: 2px solid salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+    <!-- div의 태그를 보면 전부  -->
+    <span>안녕하세요</span>
+    <span>안녕하세요</span>
+    <!-- span은 inline요소이다. -->
+    <section>
+        <p>후후</p>
+        <!-- p의 block요소이다. -->
+    </section>
+    <article>
+        <h1>하하</h1>
+        <!-- h태그는 block 요소이다. -->
+    </article>
+
+    <!-- 블록 레벨을 확인하기 위한 연습 -->
+    <!-- 블록 요소안에 인라인 요소를 넣을 수 있다. 하지만 인라인 요소 태그안에 블록 요소를 넣을 수 없다. -->
+    <!-- 인라인 요소는 가로로 쌓이며, 블록은 세로로 쌓인다. -->
+    <h1>멋쟁이사자처럼</h1>
+
+    <div>Hi</div>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+    </ol>
+    <!-- 주의! ol,ul,li block이다.-->
+    <button>하나</button>
+    <button>둘</button>
+    <!-- button은 inline-block이다. -->
+    <table>
+        <tr>
+            <td>안녕</td>
+            <td>하세요.</td>
+        </tr>
+    </table>
+    <!-- table, tr, td은 inline이다. -->
+
+    <br>
+    <!-- br은 inline 요소이다. -->
+
+</body>
+
+</html>
