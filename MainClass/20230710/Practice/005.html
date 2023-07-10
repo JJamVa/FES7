@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 확인</title>
+    <style>
+        body {
+            width: 20px;
+            height: 2000px;
+            overflow: scroll;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(65, 105, 225, 0.7);
+            color: white;
+        }
+
+        .relative {
+            position: relative;
+            background-color: red;
+            top:10px;
+            /* box가 실질적으로 움직이긴하나 자기의 원래 위치는 표시가 되고 다른 콘텐츠에는 영향을 주지 않음. relative */
+        }
+
+        .absolute {
+            position: absolute;
+            background-color: yellow;
+            /* 조상의 기준으로 자리를 잡는다. */
+            /* static을 제외한 position 값을 가진 가장 가까운 조상 */
+            /* 조상이 static밖에 없으면 viewport기준으로 화면 설정이 된다. */
+            /* z-index: 3; */
+            /* z-index로 확인해보면 div .parent의 영역과 겹치는 것을 확인할 수 있다. */
+        }
+
+        /*absolute가 어렵다. */
+        .parent {
+            position: relative;
+            background-color: salmon;
+        }
+
+        .box.fixed {
+            position: fixed;
+            bottom: 200px;
+            right: 200px;
+            /* viewport를 변경해도 화면에 계속 고정한다.*/
+        }
+
+        .sticky {
+            position: sticky;
+            top: 100px;
+            left: 0;
+        }
+        /* sticky는 scroll을 내릴시, 자기 영역의 밖으로 벗어날 때, 화면에서 고정이 된다. */
+    </style>
+</head>
+
+<body>
+    <div class="box relative">
+        box relative
+    </div>
+    <div class="box absolute">
+        box absolute
+    </div>
+    <div class="parent">
+        <div class="box fixed">
+            box fixed
+        </div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores suscipit non quia molestiae provident. Illum
+        voluptatibus corporis vero in, veniam neque vitae tempore fugit sunt sint ducimus totam voluptas sequi!
+    </div>
+    <div class="box sticky">
+        box sticky
+    </div>
+</body>
+
+</html>

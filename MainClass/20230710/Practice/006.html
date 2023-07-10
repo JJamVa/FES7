@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .box1,
+        .box2,
+        .box3 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1 {
+            background-color: slateblue;
+            position: relative;
+            z-index: 1;
+            /* z-index를 이용하여 레이아웃의 순서를 정한다.
+            즉, 다시말하면 누가 더 앞으로 나올지 정한다. 숫자는 클수록 더 앞이다. */
+            /* 값이 같으면 라인이 더 뒤에있는 코드가 큰값이다. */
+        }
+
+        .box2 {
+            background-color: skyblue;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 3;
+        }
+
+        .box3 {
+            background-color: salmon;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 1;
+        }
+
+        .parent {
+            background-color: rgba(255,0,0,0.3);
+            /* 부모에게 z-index를 줘도 자식에게는 영향이 없다. */
+        }
+        /* 화면을 표시해보면 relative는 높이가 표시가 되지만 absolute는 표현이 되지 않는다. */
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box1">a</div>
+        <div class="box2">b</div>
+        <div class="box3">c</div>
+    </div>
+</body>
+
+</html>
