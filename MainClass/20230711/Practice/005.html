@@ -23,15 +23,9 @@
         aside,
         footer,
         .a2 div {
-            border:10px solid #ddd;
+            border: 10px solid #ddd;
             box-sizing: border-box;
         }
-
-
-
-
-
-
         header {
             background-color: yellow;
             height: 100px;
@@ -47,12 +41,6 @@
             height: 300px;
             /* height: 50%; */
         }
-
-        /* .clear-fix::after {
-            content: '';
-            display: block;
-            clear: both;
-        } */
 
         footer {
             background-color: slateblue;
@@ -97,17 +85,21 @@
             content: '';
             display: block;
             clear: both;
+            /* 가상 요소 */
         }
 
         /* flex를 이용하여 화면 구성하기 */
-        .flex .clear-fix{
+        .flex .clear-fix {
             display: flex;
         }
-        .flex section{
-            flex-grow:3;
+
+        .flex section {
+            flex-grow: 3;
         }
-        .flex aside{
+
+        .flex aside {
             flex-basis: 20%;
+            /* 요소의 크기를 할당 */
             /* flex-grow:1; */
             flex-shrink: 0;
         }

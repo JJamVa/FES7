@@ -31,8 +31,6 @@
 
         .box1 {
             float: left;
-
-
         }
 
         .box2 {
@@ -41,8 +39,10 @@
 
         .box3 {
             clear: left;
+            /* float를 해제 */
             position: relative;
             z-index: 10;
+            /* 우선 순위를 높힌다. 현재 코드에서는 의미 없지만 만약 float가 겹치게 된다면 앞으로 나온다. */
         }
 
         h2,
