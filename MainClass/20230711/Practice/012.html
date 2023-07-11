@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 숨김처리</title>
+    <style>
+        p.hidden {
+            /* display: none; */
+            /* none의 단점은 트리구조도 사라진다. 아예 사라진다. 콘텐츠를 주는 방법으로는 옳지않다.*/
+
+            /* visibility: hidden; */
+            /* visibility: hidden은 콘텐츠는 보이지않지만 할당한 영역에 대해서는 그대로 둔다. */
+
+            /* width:0;
+            height:0;
+            overflow: hidden; */
+            /* 똑같은 기능. 이부분을 권장 스크린리더도 읽지않는다. */
+
+            /* font-size:0px;
+            line-height: 0px; */
+            /* 작동은 하지만 가로 공간에 대하여 차지 */
+
+            /* text-indent: -9999px; */
+            /* 텍스트를 왼쪽으로 밀어낸다. -9999는 상징성 있는 수치. 권장하지는 않음.*/
+
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            /* snippet으로 설정 a11y */
+            /* text를 제일 좋은 방법으로 가리는 방법 */
+        }
+    </style>
+</head>
+
+<body>
+    <p class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nostrum corrupti dolores eveniet
+        laudantium dolorum reiciendis asperiores commodi fuga natus cum atque est, voluptates optio! Velit enim dolorum
+        amet fugiat!</p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident laborum illum quisquam assumenda
+        enim! Voluptatem ad earum quis adipisci debitis voluptates, sint omnis nesciunt laboriosam vel eveniet dolores
+        aperiam.
+    </p>
+</body>
+
+</html>
