@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex shrink</title>
+    <style>
+        .container {
+            height: 500px;
+            width: 200px;
+            display: flex;
+            background-color: #ddd;
+            align-items: center;
+        }
+
+        .item {
+            background-color: skyblue;
+            border: 2px solid royalblue;
+        }
+
+        .item1 {
+            flex-basis:200px;
+            flex-shrink: 0;
+            /* 줄어드는 강도 0을 주면 원본 값 유지, 그 이상 값을 주면 압축 된다.*/
+            align-self: center;
+            /* 개별로 속성을 부여 할 수 있는 속성 */
+            order: 10;
+            /* order는 순서를 작성하여 container안에서 배치 순서를 정한다. 값이 작을수록 더 앞으로 높을 수록 뒤로. */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">item A</div>
+        <div class="item item2">item B</div>
+        <div class="item item3">item C</div>
+        <div class="item item4">item D</div>
+        <div class="item">item A</div>
+        <div class="item">item B</div>
+        <div class="item">item C</div>
+        <div class="item">item D</div>
+    </div>
+
+
+</body>
+
+</html>

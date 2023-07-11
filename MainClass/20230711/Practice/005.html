@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습(레이아웃)</title>
+    <style>
+        /* text 가운데 정렬 */
+        header,
+        section,
+        aside,
+        footer,
+        .a2 div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header,
+        section,
+        aside,
+        footer,
+        .a2 div {
+            border:10px solid #ddd;
+            box-sizing: border-box;
+        }
+
+
+
+
+
+
+        header {
+            background-color: yellow;
+            height: 100px;
+        }
+
+        section {
+            background-color: salmon;
+            height: 300px;
+        }
+
+        aside {
+            background-color: skyblue;
+            height: 300px;
+            /* height: 50%; */
+        }
+
+        /* .clear-fix::after {
+            content: '';
+            display: block;
+            clear: both;
+        } */
+
+        footer {
+            background-color: slateblue;
+            height: 100px;
+            /* clear: both; */
+        }
+
+        /* 방법1: 기본 너비가 없을 때 -> section에 CSS 적용*/
+        .a1 section {
+            float: left;
+            width: 80%;
+        }
+
+        /* 방법2 너비값이 있을 때 */
+        .a2 section {
+            width: 80%;
+            float: left;
+        }
+
+        .a2 aside {
+            width: 20%;
+            float: right;
+        }
+
+        .a2 footer {
+            clear: left;
+        }
+
+        /* 방법3 clear-fix 사용하기 */
+
+        .a3 section {
+            width: 80%;
+            float: left;
+        }
+
+        .a3 aside {
+            width: 20%;
+            float: right;
+        }
+
+        .clear-fix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* flex를 이용하여 화면 구성하기 */
+        .flex .clear-fix{
+            display: flex;
+        }
+        .flex section{
+            flex-grow:3;
+        }
+        .flex aside{
+            flex-basis: 20%;
+            /* flex-grow:1; */
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a1">
+        <header>header</header>
+        <section>
+            <article>
+                section > article
+            </article>
+        </section>
+        <aside>aside</aside>
+        <footer>footer</footer>
+    </div>
+
+    <br>
+    <div class="a2">
+        <header>header</header>
+        <section>
+            <article>
+                section > article
+            </article>
+        </section>
+        <aside>aside</aside>
+        <footer>footer</footer>
+    </div>
+
+    <br>
+    <div class="a3">
+        <header>header</header>
+        <div class="clear-fix">
+            <section>
+                <article>
+                    section > article
+                </article>
+            </section>
+            <aside>aside</aside>
+        </div>
+        <footer>footer</footer>
+    </div>
+
+    <br>
+    <!-- flex만 이용해서 만들어보기 -->
+    <div class="flex">
+        <header>header</header>
+        <div class="clear-fix">
+            <section>
+                <article>
+                    section > article
+                </article>
+            </section>
+            <aside>aside</aside>
+        </div>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>

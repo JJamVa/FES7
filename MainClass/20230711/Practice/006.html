@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display flex</title>
+    <style>
+        /* flex의 장점: 유지보수, 반응형 */
+        /* float는 1px만 차이가 나도 화면이 깨진다. */
+        .container {
+            height: 100px;
+            display: flex;
+            background-color: aqua;
+            flex-direction: row;
+            /* flex-direction은 item들의 배치방향을 정한다.
+            row 가로, column 세로 */
+            /* row-reverse를 하면 값도 반대로 바뀌지만 시작하는 좌표값도 반대로 바뀐다. column-reverse또한 포함 */
+            gap: 10px 20px;
+            /* item들의 간격 */
+            justify-content: space-between;
+            /* justify-content로 위치 지정. flex-end, flex-start, space-between, center */
+            /* space-between은 간격에 맞게 정렬 */
+            /* space-evenly 간격은 일정*/
+            /* space-around item들의 좌우에 margin 값을 준것과 같다. */
+
+            align-items: center;
+            /* 세로 정렬을 해준다. */
+            flex-wrap: wrap;
+            /* 감싸는 여부를 정한다 default값은 nowrap */
+            /* wrap을 할경우 flex-basis 값에 따라 범위가 초과되면 다음 줄을 생기게 한다. */
+        }
+
+        .item {
+            /* background-color: slateblue; */
+            /* height: 50px; */
+            /* 부모보다 높이를 높게해주면 튀어나온다. */
+            flex-basis: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+    </div>
+    <!-- 감싸는 요소가 있어야 flex를 사용가능하다. -->
+</body>
+
+</html>

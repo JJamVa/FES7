@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .wrap {
+            display: flex;
+            /* 방법 1 */
+            /* justify-content: flex-end; */
+            /* align-items:center; */
+            /* 방법2. 이 방법으로 사용했음. */
+            flex-direction: row-reverse;
+            align-items: center;
+            background: #ddd;
+            width: 200px;
+            height: 200px;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            background: royalblue;
+        }
+        /* flex-wrap을 사용했을 때는 align-content를 사용. */
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="box">A</div>
+    </div>
+
+</body>
+
+</html>
