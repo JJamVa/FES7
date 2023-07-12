@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 복습</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: row;
+            /* align-items: center; */
+            /* justify-content: center; */
+            /* 교차 */
+            gap: 10px;
+            background-color: #eee;
+        }
+        p{
+            background-color: salmon;
+            height: 100px;
+            /* flex-shrink: 0; */
+            /* 크기를 줄이고 싶지않다면 shrink를 0으로 한다. */
+            flex-basis: 0;
+        }
+        .item1{
+            /* flex-shrink: 2; */
+            flex-grow: 2;
+            /* flex-grow:0; */
+            /* 0으로 주면 늘어나지 않는다. */
+            /* 화면의 비율 */
+        }
+        .item2{
+            /* flex-shrink: 4; */
+            flex-grow: 4;
+        }
+        .item3{
+            /* flex-shrink: 1; */
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="item1">안녕하세요.</p>
+        <p class="item2">반갑습니다.<br>하이</p>
+        <p class="item3">7기 여러분</p>
+    </div>
+</body>
+</html>

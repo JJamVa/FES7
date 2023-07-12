@@ -1,0 +1,188 @@
+/* 폰트 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* reset css */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration
+    : none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font: inherit;
+}
+
+button:enabled {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    /* 부모가 사진의 크기보다 클 때, 부모가 원본 사진보다 작을 경우
+    부모의 값을 받는다. */
+    /* 이 값을 지정하는 이유는 사진의 크기가 부모보다 넘어갈수도 있기 때문이다. */
+}
+
+ul,li{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+/* reset css */
+
+/* 실습 */
+/* card header */
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+.card {
+    width: 288px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.1);
+}
+.card header{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 16px 12px;
+}
+.card header img{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    /* object-fit: cover; */
+    /* 사이즈가 클 경우 object-fit 사용 */
+}
+.fwb{
+    font-family: 'Pretendard-Bold',sans-serif;
+    color:#29363d;
+    /* 기본값이 16px이라 주지않는다. */
+}
+.small-font{
+    font-size: 12px;
+    color: #5a6a72;
+}
+
+/* 말줄임 - 한줄 */
+.ell1{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 넘칠경우 ...으로 표현 */
+    /* flex를 사용했기에 상위 부모에서도 overflow를 해야된다. */
+}
+
+/* 이미지 썸네일 */
+.thumbnail{
+    width:100%;
+    aspect-ratio: 288/196;
+    object-fit: cover;
+}
+
+/* 사진 밑에 내용 */
+
+.card-content{
+    padding: 10px 16px 20px 16px;
+}
+
+.ell2{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.6;
+    /* 텍스트 사이의 간격(위,아래) */
+    height: calc(1em * 1.6 * 2);
+    /* 폰트 사이즈 / line-height / 문장의 수 */
+}
+.card-content .ell2{
+    margin-bottom: 16px;
+}
+
+/* read 문구 */
+.read{
+    font-size: 14px;
+    text-decoration: underline;
+
+    width: 60px;
+    padding: 3px 6px;
+    /* ::after의 기준 */
+    position: relative;
+}
+.read::after{
+    content:'';
+    display: block;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    /* 부모에도 position을 작성해야된다. */
+
+    right: 0;
+    top: 50%;
+    /* width 기준의 50% */
+
+    /* border: 2px solid #29363d; */
+    border-color:#29363d;
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+
+    transform: translateY(-50%) rotate(45deg);
+    /* 변형 한다. y좌표 값 현재 높이의 %값만큼 45도 만큼 돌린다. */
+    transition: transform 0.3s;
+}
+
+.read:hover::after{
+    transform: translateY(-50%) rotate(405deg);
+}
+
+/* 하단 버튼 3개 */
+.card{
+    position: relative;
+}
+.btn-group{
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+
+    display: flex;
+    gap: 8px;
+}
+
+.btn-group button{
+    border: 0;
+    background: none;
+    padding: 0;
+}
+.btn-group button img{
+    width:32px;
+}
+
+/* ul,li 삽입 후 적용 */
+.card-list{
+    display: flex;
+    gap: 32px 24px;
+    flex-wrap: wrap;
+}
