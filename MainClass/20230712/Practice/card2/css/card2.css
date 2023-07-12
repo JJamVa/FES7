@@ -186,3 +186,16 @@ body {
     gap: 32px 24px;
     flex-wrap: wrap;
 }
+.notice{
+    width:1224px;
+    max-width: calc(100% - 60px);
+    /* 좌우 여백을 30px씩 남김 */
+    margin:0 auto;
+    /* 자체를 가운데 정렬 */
+}
+
+.notice h2{
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-bottom: 32px;
+}
