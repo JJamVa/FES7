@@ -7,20 +7,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>버튼 만들기</title>
     <style>
+        /* reset css */
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
         :root {
-            --change-color-red: #D94242;
+            --default-border: 1px solid #1a202c;
+            --default-box-shadow: inset 1px 1px 0 0 #485261;
+            --change-color-red: #eb5757;
             --change-color-blue: #439AFF;
-            --change-box-inset-red: #D94242;
-            --change-box-inset-blue: #3B78BE;
+            --change-box-hover-red: inset 1px 1px 0 0 #fd6f6f;
+            --change-box-hover-blue: inset 1px 1px 0 0 #73b4f7;
+            --change-box-active-red: inset 1px 1px 0 0 #d94242;
+            --change-box-active-blue: inset 1px 1px 0 0 #3b78be;
+        }
+
+        button {
+            font-size: 12px;
+            margin: 10px;
+            width: 88px;
+            height: 32px;
+            background-color: #3f3F50;
+        }
+
+        .btn1 {
+            color: #CBD5DF;
+            border: var(--default-border);
+            box-shadow: var(--default-box-shadow);
+        }
+        .btn1:enabled:hover {
+            color: white;
+        }
+
+
+        /* btn1에 대한 이벤트 */
+        .btn2 {
+            color: #439AFF;
+            border: var(--default-border);
+            box-shadow: var(--default-box-shadow);
+        }
+        .btn2:enabled:hover{
+            color: white;
+            background-color: var(--change-color-blue);
+            box-shadow: var(--change-box-hover-blue);
+            border: 1px solid var(--change-color-blue);
+        }
+        .btn2:enabled:active{
+            color: white;
+            background-color: var(--change-color-blue);
+            box-shadow: var(--change-box-active-blue);
+        }
+
+        /* btn2에 대한 이벤트 */
+        .btn3 {
+            color: #EB5757;
+            border: var(--default-border);
+            box-shadow: var(--default-box-shadow);
+        }
+        .btn3:enabled:hover{
+            color: white;
+            background-color: var(--change-color-red);
+            box-shadow: var(--change-box-hover-red);
+            border: 1px solid var(--change-color-red);
+        }
+        .btn3:enabled:active{
+            color: white;
+            background-color: var(--change-color-red);
+            box-shadow: var(--change-box-active-red);
+        }
+
+        .btn1:enabled:hover,
+        .btn2:enabled:hover,
+        .btn3:enabled:hover {
+            transition: all 0.5s;
+            text-decoration: underline;
+        }
+
+        .btn1:enabled:active,
+        .btn2:enabled:active,
+        .btn3:enabled:active {
+            text-decoration: underline;
+        }
+
+        .btn4 {
+            color: #4a5568;
+            border: var(--default-border);
         }
     </style>
 </head>
 
 <body>
-    <button class="btn1-1" type="button">Button</button>
-    <button class="btn1-2" type="button">Button</button>
-    <button class="btn1-3" type="button">Button</button>
-    <button type="button" disabled>Button</button>
+    <button class="btn1" type="button">Button</button>
+    <button class="btn2" type="button">Yes</button>
+    <button class="btn3" type="button">Del</button>
+    <button class="btn4" type="button" disabled>Button</button>
 </body>
 
 </html>
