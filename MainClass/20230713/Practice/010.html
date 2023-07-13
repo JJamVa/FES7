@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        .modal {
+            width: 200px;
+            height: 160px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+
+            text-align: center;
+            position: fixed;
+            /* top: 50%;
+            left: 50%; */
+            top: calc(50% - (100px/2));
+            left: calc(50% - (200px/2));
+            /* transform: translate(-50%, -50%); */
+            /* translate를 사용하여 박스를 가운데 정렬하기 위해 사용
+            실제적으로 top, left로 50%해도 박스의 왼쪽 위 모서리가 중심이다. */
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis accusantium, hic totam maiores beatae delectus
+        eveniet consectetur ipsa nobis nam, maxime unde id cum est provident repellat molestiae modi sit.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque impedit dolores nisi in, deleniti quia debitis
+        aperiam quas maxime fuga ut modi ipsam saepe, aspernatur est commodi, cumque sapiente odit. Lorem, ipsum dolor
+        sit amet consectetur adipisicing elit. Neque iusto voluptates laborum dignissimos ratione accusamus placeat,
+        delectus dolorum optio eos quo, voluptas commodi debitis soluta rem quia. Quisquam, obcaecati magni?
+    </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis accusantium, hic totam maiores beatae delectus
+        eveniet consectetur ipsa nobis nam, maxime unde id cum est provident repellat molestiae modi sit.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque impedit dolores nisi in, deleniti quia debitis
+        aperiam quas maxime fuga ut modi ipsam saepe, aspernatur est commodi, cumque sapiente odit. Lorem, ipsum dolor
+        sit amet consectetur adipisicing elit. Neque iusto voluptates laborum dignissimos ratione accusamus placeat,
+        delectus dolorum optio eos quo, voluptas commodi debitis soluta rem quia. Quisquam, obcaecati magni?
+    </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis accusantium, hic totam maiores beatae delectus
+        eveniet consectetur ipsa nobis nam, maxime unde id cum est provident repellat molestiae modi sit.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque impedit dolores nisi in, deleniti quia debitis
+        aperiam quas maxime fuga ut modi ipsam saepe, aspernatur est commodi, cumque sapiente odit. Lorem, ipsum dolor
+        sit amet consectetur adipisicing elit. Neque iusto voluptates laborum dignissimos ratione accusamus placeat,
+        delectus dolorum optio eos quo, voluptas commodi debitis soluta rem quia. Quisquam, obcaecati magni?
+    </p>
+
+    <div class="modal">
+        <p>삭제 하시겠습니까?</p>
+        <button type="button">취소</button>
+        <button type="button">삭제</button>
+    </div>
+</body>
+
+</html>

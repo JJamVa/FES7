@@ -1,33 +1,71 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>translate와 position</title>
     <style>
-        .box{
+        .box {
             width: 100px;
             height: 100px;
             background-color: royalblue;
-            color:white;
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .box:nth-child(even){
+
+        .box:nth-child(even) {
             background-color: seagreen;
         }
-        .translate{
-            transform:  translate(50px,50px);
+
+        .translate {
+            transform: translate(50px, 50px);
         }
-        .position{
+
+        .position {
             position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        .bar {
+            background-color: #ddd;
+            width: 400px;
+            margin: auto;
+        }
+
+        .bar2 {
+            background-color: rgba(65,105,225,0.5);
+            height: 30px;
+            width: 100%;
+            transform-origin: 0 0;
+            transform: translateX(-100%);
+            transition: all 0.3s;
+        }
+
+        .bar:hover .bar2 {
+            /* width: 100%; */
+            transform: scaleX(100%);
+            /* width를 이용하여 게이지 바를 만드는 과정에서 동작은 문제가 없다.
+            하지만 성능적인 문제에서는 개선이 가능하다.
+            transform과 translate를 이용하여 똑같이 동작시킬수 있지만 성능적인 면에서도 개선이 가능했다. */
+        }
+        .bar:hover{
+            background-color: red;
         }
     </style>
 </head>
+
 <body>
     <div class="box translate">translate</div>
     <div class="box position">position</div>
+
+    <div class="bar">
+        <div class="bar2"></div>
+    </div>
 </body>
+
 </html>
