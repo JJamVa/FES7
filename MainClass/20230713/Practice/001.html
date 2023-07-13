@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 변수</title>
+    <style>
+        body {
+            --color-main: black;
+        }
+
+        :root {
+            --main-color: skyblue;
+            --pane-padding: 0.5em 2em;
+            --border-radius: 0.4em;
+            /* 변수명 앞에 --는 무조건 붙여야하며, -- 뒤에는 내가 이해하기 쉬운 변수명을 붙여도 상관없다.  */
+            --hi: red;
+            /* 위의 설명의 예시 */
+        }
+
+        h1 {
+            --col-main: yellow;
+            background-color: var(--col-main, black);
+            padding: var(--pane-padding);
+        }
+
+        .test {
+            background-color: var(--color-main);
+            /* 부모나 조상에서 지역 변수를 선언해도 사용이 가능하다. */
+        }
+
+        button {
+            --color-main: black;
+            color: var(--main-color, blue);
+            /* 만약 변수가 설정 되어있지 않다면 두번째 인자값에 색상 컬러를 넣는다. */
+            border-color: var(--main-c, salmon);
+            /* 존재하지 않는 변수명을 사용했음에도 정상 작동되는것을 확인했다. */
+            padding: var(--pane-padding);
+            border-radius: var(--border-radius, 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button">버튼</button>
+    <h1>반갑습니다.</h1>
+    <p class="test">안녕하세요.</p>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+.btn {
+    width: 88px;
+    height: 32px;
+    /* 높이를 지정해도 버튼은 텍스트가 가운데 정렬이 되어있다. */
+    border-radius: 0;
+    border: 1px solid #1a202c;
+    background-color: #343f50;
+    color: #cbd5df;
+    transition: all 0.5s, background-color 2s;
+    /* 전체 0.5초를 두고 뒷 배경은 2초로 둔다.
+    개발자 모드에서 cubic-bezier를 보면서 이벤트 시간에 대한 속도나 그래프를 이용하여 적용해 볼 수 있다. */
+    /* transition: all 0.5s -1s; */
+    /* 지연시간도 지정할 수 있다. 음수 값은 의도된 값이 아니라면 사용하지말자.*/
+}
+
+.btn:enabled {
+    box-shadow: inset 1px 1px 0 0 #4a5568;
+}
+
+.btn:enabled:hover {
+    color: white;
+    /* text-decoration: underline; */
+    /* transition 속성을 적용해도 text-decoration의 이벤트가 동작하지않는다. */
+    text-decoration: underline transparent;
+    /* transparent 작업을 하면 적용은 된다. */
+    /* 이벤트 처리 시간도 설정하긴 해야된다.. */
+}
+
+.btn:enabled:active {
+    box-shadow: inset 1px 1px 0 0 #4a5568;
+}
+/* 1-1 */
+
+.positive{
+    color: #439aff;
+}
+.positive:enabled:hover{
+    background-color: #439aff;
+    border: 1px solid #439aff;
+    box-shadow: inset 1px 1px 0 0 #73b4f7;
+}
+
+.positive:enabled:active{
+    box-shadow: inset 1px 1px 0 0 #3b78be;
+}
+
+/* positive button */
+
+.negative{
+    color: #eb5757;
+}
+.negative:enabled:hover{
+    background-color: #eb5757;
+    border: 1px solid #eb5757;
+    box-shadow: inset 1px 1px 0 0 #fd6f6f;
+}
+
+.negative:enabled:active{
+    box-shadow: inset 1px 1px 0 0 #d94242;
+}
+/* negative 버튼 */
+
+.btn:disabled {
+    border: 1px solid #343e4e;
+    background-color: #3a4556;
+}
+/* disabled */

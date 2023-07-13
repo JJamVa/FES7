@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc()</title>
+    <style>
+        div{
+            background-color: skyblue;
+            width: calc(100% - 80em);
+            /* width: calc(100%+80em); */
+            /* calc안에 사칙연산을 할 때, 띄어쓰기를 꼭 해야된다. 아니면 이상값 또는 적용이 되지 않는다. */
+        }
+        ul,li{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            --bgc: gold;
+        }
+        li{
+            background-color: var(--bgc);
+            float:left;
+            width: calc((100% - (20px * 3)) / 4);
+            /* 3은 사이의 빈공간 개수, 4는 요소의 개수 */
+
+            /* width: 33.3333%; */
+            /* 브라우저마다 소수점 계산값은 권장하지 않는다. 서로 달라 보일수있다. */
+        }
+        li:not(:first-child){
+            margin-left: 20px;
+        }
+        li:nth-child(2n){
+            background-color: seagreen;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        hi
+    </div>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+</html>

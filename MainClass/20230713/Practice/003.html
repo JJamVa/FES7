@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min/max</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .wrap{
+            background-color: slateblue;
+            margin: auto;
+
+            /* 방법 1 */
+            /* width:1000px;
+            max-width: calc(100% - 80px); */
+
+            /* 방법 2 */
+            width: min(1000px, calc(100% - 80px));
+            /* min은 둘 중의 값중 작은 값을 선택, max은 둘 중의 큰 값을 선택 */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        hello
+    </div>
+</body>
+</html>

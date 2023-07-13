@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clamp()</title>
+    <style>
+        .px{
+            font-size: 20px;
+        }
+        .px40 {
+            font-size: 40px;
+        }
+        .clamp{
+            font-size: clamp(20px, 2.5vw ,40px);
+            /* clamp(최소값, 이상적인 값, 최대값) */
+            /* 1vw = 뷰포트 너비 * 0.01 */
+
+            /* 500px * 0.025 = 12.5px */
+            /* 1000px * 0.025 = 25px */
+        }
+        div{
+            width: clamp(10px,20vw, 400px);
+            background-color: rosybrown;
+        }
+    </style>
+</head>
+<body>
+    <p class="px">안녕하세요.</p>
+    <p class="clamp">안녕하세요.</p>
+    <p class="px40">안녕하세요.</p>
+    <div>
+        박스
+    </div>
+</body>
+</html>

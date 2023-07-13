@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transporm</title>
+    <style>
+        .box{
+            width: 100px;
+            height:100px;
+            background-color: royalblue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box:nth-child(even){
+            background-color: seagreen;
+        }
+        .scale{
+            transform-origin: 0,0;
+            /* transform: scale(2); */
+            /* 원래 크기가 scale을 통해 변경해도 본인 위치에서 크기 변화가 일어난다. */
+            transition: all 2s;
+        }
+        .scale:hover{
+            /* transform: scale(1.2); */
+            /* transform: scaleX(1.2) scaleY(2); */
+            /* transform: rotate(360deg); */
+            /* 360deg 대신 1turn을 입력 해도된다. */
+
+            /* transform: scale(-1,-2)을 하면 반전이 된다. */
+            /* transform:  translate(-50px, 50px); */
+            transform: skew(45deg, 45deg);
+            /* 좌표 값만큼 휘어진다. */
+
+            transform: translate(10px, 10px);
+
+            rotate: 40deg;
+            scale: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="box scale">
+        box
+    </div>
+    <div class="box">
+        box
+    </div>
+</body>
+</html>

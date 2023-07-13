@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 연습</title>
+    <style>
+        [class]{
+            background-color: yellow;
+            /* 속성 class라고 쓰여진 곳 전부 해당된다. */
+        }
+        [target]{
+            color: red;
+        }
+        [class="hello1"]{
+            background-color: black;
+            color: red;
+            /* 속성 뿐만이 아니라 속성값도 선택이 가능하다. */
+        }
+    </style>
+</head>
+
+<body>
+    <p class="hello1">안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p class="hello2">안녕하세요</p>
+    <p>안녕하세요</p>
+    <a href="#" target="_blank">안녕하세요.</a>
+</body>
+
+</html>
