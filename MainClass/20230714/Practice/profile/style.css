@@ -1,19 +1,37 @@
 /* 2번째 순서로서 초기값을 할당해야한다. 초기값을 두기 위해서는 맨위에 쓰는 것을 권장한다. */
 /* type-selector를 의도적으로 쓴다. */
+/* ,는 그룹 selector(그룹핑) */
 h1,
-p {
-    margin: initial;
+p,
+ul,
+h2 {
+    margin: unset;
     /* 브라우저에서 제공하는 초기 값을 넣어준다. */
+    /* 상속 지원이 안된다. 그럼 initial */
+    padding: unset;
 }
 
-/* 타입 selector  -> 광범위한 selector 구체적이지 않다.*/
+h1,h2 {
+    font-size: unset;
+    /* 브라우저에서 제공하는 폰트사이트가 지정되어있다. 16px이다. */
+    /* 상속 지원이 되면 inherit */
+    font-weight: unset;
+    /* unset은 inherit이나 initial 가능한지 여부를 확인하고 맞게 적용해준다. */
+}
+li{
+    list-style-type: none;
+    /* unset을 안한 이유는? */
+    /* 내가 점을 보기 싫어서 none을 쓴거 뿐이다. */
+}
+
+/* 타입 selector -> 광범위한 selector 구체적이지 않다.*/
 body {
     background-image: url(images/background.gif);
 }
 
-div {
+/* div { */
     /* 부모가 제공해주는 컨텐츠 영역의 크기 */
-    width: 800px;
+    /* width: 800px; */
     /* 원래 초기값은 auto */
     /* 초기값 initial value */
 
@@ -21,7 +39,7 @@ div {
     /* %는 컨테이너 블록의 너비 백분율 */
 
     /* margin-left: auto; */
-    margin: 0 auto;
+    /* margin: 0 auto; */
     /* margin-left에서 대여받은 공간에서 div의 사용한 태그를 제외하고 남은 공간을 margin 값으로 사용 할 수 있다. */
     /* margin을 통해 auto, %랑 다른 것을 볼 수 있다. */
     /* auto는 그 만큼 값을 뺀다.  %는 width는 유지하고 밀어낸다. */
@@ -29,10 +47,10 @@ div {
 
     /* display 초기값은 inline*/
     /* 브라우저 개발자들이 각각의 개발 홈페이지에 따라 block으로 처리한다.*/
-}
+/* } */
 
-.wrapper{
-    background-color: #fff;
+.wrapper {
+    background-color: #ddd;
     width: 800px;
     height: auto;
     /* 작성하지 않아도 height는 auto이다. */
@@ -40,13 +58,14 @@ div {
 }
 
 *.header {
-    background-image: url(images/cover05.png);
+    background-image: url(images/cover02.png);
     background-size: cover;
     background-position: center;
     padding: 100px 0;
+    color: white;
 }
 
-img{
+img {
     display: block;
     margin: 0 auto;
     /* img 태그는 inline 요소라 불가능하다. 공백 공간은 다음 요소의 것이다. */
@@ -54,9 +73,12 @@ img{
 
 /* header인 class이름들 class의 이름은 숫자로 시작할 수 없다.*/
 
-/* descendent 태그 */
-.header h1{
+/* 집계 자식 태그. > 도 combinator */
+.header h1 {
     text-align: center;
+    color: white;
+
+    font-size: 100px;
     /* 컨텐츠만 가운데로 가는 것. */
 
     /* width: auto;
@@ -64,15 +86,45 @@ img{
     /* 위와 같은 문법은 block요소에 대하여 빈 공간이 없어서 동작하지 않는다. */
 }
 
-.header p{
+/* descendent(하위) 태그 */
+.header p {
     border-top: 4px solid white;
     color: white;
-    background-color: goldenrod;
     width: fit-content;
-    padding: 0 20px;
+    padding: 10px 20px;
     margin: 0 auto;
+    /* .header p에서 한칸 띄워쓰는 것을 combinator라고 한다. 즉, 조합을 만들어낸다. */
 }
 
+.section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    background-image: url(images/icon-information.png);
+    background-repeat: no-repeat;
+    background-position: right 30px center;
+    /* right 기준에서 30px */
+}
+
+.section.skill{
+    background-image: url(images/icon-skills.png);
+}
+
+.section h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: salmon;
+}
+
+.list li{
+    border-left: 5px solid #ddd;
+    padding-left: 5px;
+}
+
+/* background-color은 상속이 되는 것이 아니라 transparent가 기본값이기 때문에 투명해 보이는 것이다. */
 .footer {
+    text-align: center;
+    padding: 10px 0;
     background-color: #f4f4f4;
 }
