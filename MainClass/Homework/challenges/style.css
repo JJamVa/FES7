@@ -1,0 +1,33 @@
+*{
+    color: white;
+}
+body{
+    margin: 0;
+    width: 100%;
+    background: url(./images/bg.png);
+}
+
+/* 기본 CSS 크기 설정 및 배경 삽입 */
+
+
+.view{
+    width: 300px;
+    margin: 57px auto;
+}
+
+img{
+    display: block;
+}
+.locate{
+    width: 300px;
+    margin: 0 auto;
+}
+.content{
+    padding: 10px 20px;
+    background-color: #9c6035;
+    box-shadow: 0 10px 1px 0 #46260E;
+    border-radius: 0 0 20px 20px;
+}
+.text{
+    color:#e8bc9c;
+}
