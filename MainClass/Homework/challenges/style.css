@@ -5,6 +5,14 @@ body{
     margin: 0;
     width: 100%;
     background: url(./images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* 배경화면을 cover로 둔다. viewport를 가변하였을 때, 화면이 그대로 유지가 된다. */
+}
+h1{
+    font-size: 36px;
+    margin: 0;
+    /* 이게 문제였다. h1 초기화를 꼭 하자. ***** */
 }
 
 /* 기본 CSS 크기 설정 및 배경 삽입 */
@@ -18,16 +26,19 @@ body{
 img{
     display: block;
 }
+
 .locate{
-    width: 300px;
+    width: 100%;
     margin: 0 auto;
 }
 .content{
-    padding: 10px 20px;
+    width:auto;
+    padding: 10px 20px 40px;
     background-color: #9c6035;
     box-shadow: 0 10px 1px 0 #46260E;
     border-radius: 0 0 20px 20px;
 }
 .text{
     color:#e8bc9c;
+    margin-top: 10px;
 }
