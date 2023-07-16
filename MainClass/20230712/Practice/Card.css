@@ -88,6 +88,9 @@ p {
     display: flex;
     gap:20px;
 }
+.read.pb{
+    text-decoration: underline;
+}
 
 
 .right-icon{
