@@ -19,12 +19,26 @@
         header{
             background-color: skyblue;
             grid-area:1/1/2/3;
+            z-index: 10;
+            /* grid에서도 z-index로 중복된 레이아웃 중 가중치를 두어 화면을 앞으로 보낼 수 있다. */
         }
         section{
             background-color: slateblue;
+            grid-area:2/1/3/2;
+            /* grid-area에서 좌표점은 세로 줄부터 읽어야된다. */
+
+            /* align-self: center;
+            justify-self: center; */
+            /* 아이템을 개별적으로 쓰고 싶다면 self! */
+            place-self: center center;
+            /* align-self, justify-self 두개의 함축 속성이다. */
+
+            /* grid-auto-flow: row dense; */
+            /* dense는 빈공간에 맞는 곳에 넣는다. */
         }
         aside{
-            background-color: yellow;
+            background-color: rgb(255, 255, 0,0.5);
+            grid-area: 1/1/3/3;
         }
 
         footer{
@@ -32,7 +46,7 @@
             /* grid-column: 1/3;
             grid-row: 3/4; */
             grid-area: 3/1/4/3;
-            /* grid-column, grid-row 순이지만 넣는 값 순서는 역순위이다. */
+            /* grid-column, grid-row 순이지만 넣는 값 순서는 역순 이다. */
         }
     </style>
 </head>

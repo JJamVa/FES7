@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>grid Review ver</title>
+    <title>grid Review ver(grid-template-areas)</title>
     <style>
-        .container{
+        .container {
             width: 600px;
             height: 600px;
             background-color: royalblue;
             display: grid;
-            gap:10px;
+            gap: 10px;
+
+            grid-template-areas:
+                "header header header"
+                "section section AAA"
+                "footer footer footer"
+            ;
+            /* grid-template-areas를 이용하여 배열처럼 값을 넣는다 */
+            grid-template-rows: 1fr 3fr 1fr;
+            /* grid-template-areas를 사용하였을 때, grid-template-rows나 columns로 비율 조정이 가능*/
         }
 
-        header{
+        header {
             background-color: skyblue;
-            grid-area:1/1/2/3;
-        }
-        section{
-            background-color: slateblue;
-        }
-        aside{
-            background-color: yellow;
+            grid-area: header;
+            /* grid-area 속성을 이용하여 지정한다. grid-template-areas를 사용하기 위해 사용하는 속성
+            굳이 태그에 이름 맞게 설정할 필요는 없다.*/
         }
 
-        footer{
+        section {
+            background-color: slateblue;
+            grid-area: section;
+        }
+
+        aside {
+            background-color: yellow;
+            grid-area: AAA;
+            /* grid-area에 이름을 지정 후, 상위 부모의 grid-template-areas에 맞게만 잘 사용하면 문제 없다. */
+        }
+
+        footer {
             background-color: salmon;
-            /* grid-column: 1/3;
-            grid-row: 3/4; */
-            grid-area: 3/1/4/3;
-            /* grid-column, grid-row 순이지만 넣는 값 순서는 역순위이다. */
+            grid-area:footer;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>header</header>
@@ -42,4 +57,5 @@
         <footer>footer</footer>
     </div>
 </body>
+
 </html>

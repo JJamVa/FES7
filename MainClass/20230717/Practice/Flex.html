@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 520px;
+            height: 520px;
+        }
+
+        .item-a {
+            background-color: royalblue;
+        }
+
+        .item-b {
+            background-color: gold;
+        }
+
+        .item-c {
+            background-color: slateblue;
+        }
+
+        .item-d {
+            background-color: orange;
+        }
+
+        .item-e {
+            background-color: salmon;
+        }
+
+        .item-f {
+            background-color: seagreen;
+        }
+
+        .con1,
+        .con2 {
+            flex-basis: 0;
+            /* flex-grow의 비율 유지를 위해서 사용하는 것이면 flex-basis:0을 사용하는 것이 좋다.
+            하지만 flex-basis:0을 사용하지 않고 비율을 유지하려면 고정 값 px을 넣어야한다. */
+        }
+
+
+        /* 첫번째 flex */
+        .con1 {
+            flex-grow: 3;
+        }
+
+        /* 두번째 felx */
+        .con2 {
+            flex-grow: 2;
+            display: flex;
+            /* gap: 10px; */
+            flex-direction: row;
+        }
+
+        .con2 .item-e {
+            flex-grow: 2;
+        }
+
+        .con2 .item-f {
+            flex-grow: 3;
+        }
+        /* 3번째 flex */
+        .con1{
+            display:flex;
+        }
+        .con1 .con3{
+            flex-grow: 3;
+        }
+        .con1 .item-d{
+            flex-grow: 2;
+        }
+        /* 4번째 flex */
+        .con3{
+            display: flex;
+            flex-direction: column;
+        }
+        .con3 .item-a{
+            flex-grow: 2;
+        }
+        .con3 .con4{
+            flex-grow: 1;
+        }
+        /* 5번째 flex */
+        .con4{
+            display: flex;
+        }
+        .con4 .item-b{
+            flex-grow:2;
+        }
+        .con4 .item-c{
+            flex-grow:1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="con1">
+            <div class="con3">
+                <div class="item-a">A</div>
+                <div class="con4">
+                    <div class="item-b">B</div>
+                    <div class="item-c">C</div>
+                </div>
+            </div>
+            <div class="item-d">D</div>
+        </div>
+
+        <div class="con2">
+            <div class="item-e">E</div>
+            <div class="item-f">F</div>
+        </div>
+    </div>
+    <!-- 결론적으로 형태는 grid와 같이 흉내가 가능하지만 실제적으로 비율이나 간격을 보면 조금 차이가 있다.(gap으로 인한 차이도 있다.)
+    즉, flex의 비율을 조절하려면 정확한 값을 넣어야된다. 그러면 grid로 구현하였을 때와 똑같이 출력이 된다.-->
+</body>
+
+</html>

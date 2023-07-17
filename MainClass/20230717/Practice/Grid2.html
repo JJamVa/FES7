@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Arias</title>
+    <style>
+        .container {
+            background-color: #eee;
+            width:500px;
+            height:500px;
+            /* width 값은 안주면 100%가 되고 height 값을 주지 않으면 정상적으로 작동이 되지 않는다. */
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                "b b b y y"
+                "b b b y y"
+                "slat slat sal y y"
+                "r r gr gr gr"
+                "r r gr gr gr";
+            /* grid-template-areas에서 범위는 편한 대로 설정해도 됨. 방법은 다양 */
+        }
+
+        :root {
+            --red: red;
+            --blue: blue;
+            --slateblue: slateblue;
+            --salmon: salmon;
+            --yellow: yellow;
+            --green:green;
+        }
+
+        .b {
+            background-color: var(--blue);
+            grid-area: b;
+        }
+
+        .y {
+            background-color: var(--yellow);
+            grid-area: y;
+        }
+
+        .slat {
+            background-color: var(--slateblue);
+            grid-area: slat;
+        }
+        .sal{
+            background-color: var(--salmon);
+            grid-area: sal;
+        }
+        .r {
+            background-color: var(--red);
+            grid-area: r;
+        }
+        .gr {
+            background-color: var(--green);
+            grid-area: gr;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="b"></div>
+        <div class="y"></div>
+        <div class="slat"></div>
+        <div class="sal"></div>
+        <div class="r"></div>
+        <div class="gr"></div>
+    </div>
+</body>
+
+</html>
