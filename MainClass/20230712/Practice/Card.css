@@ -21,7 +21,7 @@ body {
     width: 100%;
 }
 
-section {
+article {
     border-radius: 10px;
     width: 288px;
     box-shadow: 2px 2px 8px 0px #0000001A;
@@ -43,7 +43,7 @@ p,div {
 
 /* 위는 css 초기값 설정 */
 
-.title-section {
+.title-article {
     display: flex;
     gap: 16px;
     padding: 16px 16px 12px;
@@ -125,3 +125,15 @@ p,div {
     width: 32px;
     height: 32px;
 }
+
+/* 위의 코드는 하나의 카드 UI를 만들기 위한 CSS 코드 */
+
+/* 밑의 코드는 여러 가지 UI를 화면 배치하기 위한 코드 */
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* flex-wrap을 통해 viewport 기준으로 얼마나 넣을 건지 설정 */
