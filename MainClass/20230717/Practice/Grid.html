@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout Practice</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            margin: 50px;
+            font-size: 16px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 1fr 3fr 1fr;
+        }
+
+        .header {
+            background-color: skyblue;
+            grid-column: 1/3;
+        }
+
+        .section {
+            background-color: slateblue;
+            grid-column-start:1;
+            grid-column-end:2;
+        }
+
+        .aside {
+            background-color: yellow;
+        }
+
+        .footer {
+            background-color: salmon;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start:3;
+            grid-row-end:4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="section">section > article</div>
+        <div class="aside">aside</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>

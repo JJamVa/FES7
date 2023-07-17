@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-area</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            background-color: #eee;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .item:nth-child(odd) {
+            background-color: skyblue;
+        }
+
+        .item.a {
+            background-color: salmon;
+            /* grid-row-start: 3;
+            grid-row-end: 2; */
+            /* row의 위치 순서를 정함. 세로의 위치 */
+
+            /* grid-column-start: 3;
+            grid-column-end: 2; */
+            /* column의 위치 순서를 정함. 가로의 위치 */
+
+            /* grid-row: 2/4;*/
+            /* 위의 grid-row-start, grid-row-end를 합친 속성 */
+            /* grid-column: 2/4; */
+            /* 위의 grid-column-start, grid-column-end를 합친 속성 */
+
+            /* grid-area: 2/2/4/4; */
+            /* 쉽게 이해하자면 (2,2)지점과 (4,4)지점 */
+
+            grid-area: 2/2/span 2/span 2;
+            /* table의 span을 통해 열이나 행을 합한 것처럼 grid에서도 span을 통해 통합 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+    </div>
+</body>
+
+</html>

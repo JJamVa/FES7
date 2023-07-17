@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            background-color: #ddd;
+            /* grid-template-row,columns 영역을 px로 두게되면 height값을 설정하였을 때, 남은 영역도 다 보이게 된다. */
+
+            align-content: space-between;
+            justify-content: space-between;
+            /* 요소들의 배치 */
+
+            align-items: center;
+            justify-items: center;
+            /* cell안에서 어떻게 정렬할건지 */
+
+        }
+
+        .item {
+            width:50px;
+            height:50px;
+            background-color: skyblue;
+        }
+
+        .item:nth-child(odd) {
+            background-color: seagreen;
+        }
+
+        .item:nth-child(3){
+            background-color: salmon;
+            justify-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">i</div>
+    </div>
+
+
+</body>
+
+</html>
