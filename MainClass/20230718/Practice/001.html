@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            animation: change 2s 1s infinite;
+            /* animation 속성을 작성 후, @keyframes에 작성했던 이름/ 이벤트 처리 시간/ 반복상태 */
+        }
+
+        @keyframes change {
+            /* @keyframes 하고 내가 편한 이름을 지정 */
+            from {
+                scale:0;
+                background-color: blue;
+            }
+
+            to {
+                scale: 50%;
+                /* %는 원본 기준의 크기의 % 값 */
+                background-color: seagreen;
+            }
+        }
+
+        .licat{
+            width: 168px;
+            height: 200px;
+            border: 1px solid #000;
+            background: url(image/keyframes-licat.png) no-repeat 0 0 / auto 100%;
+            /* 밑의 코드들은 background의 단축 속성이다. */
+            /* background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: auto 100%; */
+
+            animation: move-licat 2s infinite steps(6);
+            /* steps()을 통해 화면을 몇 등분으로 할건지 정한다. slide의 기능이 없어진다(속성값 ease). */
+
+            /* 밑의 코드는 animation의 속성 코드들이다. */
+            /* animation-name: move-licat;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(6); */
+
+
+            /* animation-delay: 3s; */
+            /* 처음 한번에 대한 대기 시간을 부여한다. */
+        }
+
+        @keyframes move-licat{
+            to{
+                background-position: right 0;
+                /* 현재 가지고 사용하는 img기준에서는 right top과 같다. */
+            }
+
+            /* 0%{
+                background-position: 0 0;
+            }
+            50%{
+                background-position: 0 0;
+            }
+            100%{
+                background-color: right 0;
+            } */
+            /* %단위로도 표현이 가능하다! */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">box</div>
+    <div class="licat"></div>
+</body>
+
+</html>
