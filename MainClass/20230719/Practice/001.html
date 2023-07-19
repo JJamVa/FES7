@@ -17,6 +17,7 @@
 
     input[type="text"]:disabled {
       background-color: salmon;
+      /* cursor: pointer; */
     }
 
     input[type="text"]:read-only {
@@ -31,6 +32,11 @@
       text-decoration: line-through;
       color: #767676;
     }
+
+    input[type="checkbox"]:checked+label {
+      text-decoration: underline;
+      color: slateblue;
+    }
   </style>
 </head>
 
@@ -42,9 +48,18 @@
   <br>
 
   <input type="checkbox" id="chk1">
+  <!-- label을 통하여 태그안의 내용물을 클릭 시, for-id를 연결한 태그 작용 -->
   <label for="chk1">
     동의하십니까?
   </label>
+  <!-- for-id를 같은 값을 두어 상호작용시킨다. -->
+
+
+  <input type="radio" id="chk3">
+  <label for="chk3">
+    동의하십니까?
+  </label>
+  <!-- for-id값이 서로 다르면 작용되지 않는다. -->
 
   <label>안녕</label>
 </body>

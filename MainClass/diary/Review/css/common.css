@@ -87,7 +87,7 @@ body {
     /* background-position: 10px 50%; */
     background-position-x: 10px;
     background-position-y: 50%;
-    /* 태그(부모)가 설정한 크기의 %만큼 가진다.  */
+    /* 태그(부모)가 설정한 크기의 %만큼 가진다. */
     align-items: center;
 }
 

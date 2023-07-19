@@ -1,3 +1,19 @@
+/* 폰트 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* reset css */
 body,p,h2,label{
     padding: 0;
     margin: 0;
@@ -8,23 +24,45 @@ header{
     border-bottom: 1px solid #eeeeee;
 
 }
+a{
+    color: inherit;
+    text-decoration: none;
+}
 section, footer{
     width: 100%;
     background-color: #FFFAF0;
 }
+
 /* 초기 설정 및 배경 설정 */
 .header-box{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 22px 108px 23px;
 }
-.header-box label{
-    display: flex;
-}
-.header-box label img{
-    height: 32px;
-    width: 32px;
-}
-.header-box label{
+.header-box .btn-join{
     font-size: 14px;
+    display: inline-flex;
+    padding: 5px 20px 0 40px;
+    height: 40px;
+    background-image: url(../img/icon-join.svg);
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    position: 10px 50%;
+}
+/* 헤더 설정 */
+section img{
+    
+}
+
+.section-2{
+    display:flex;
+    text-align: center;
+}
+
+
+footer p{
+    font-size: 12px;
+    color: #677880;
+    text-align: center;
 }

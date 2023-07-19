@@ -11,18 +11,20 @@
             height: 200vh;
         }
 
-
         @media (orientation:portrait) {
             body {
                 background-color: salmon;
             }
         }
+        /* orientation:portrait가 세로, orientation:landscape 가로 */
 
         @media (orientation:landscape) {
             body {
                 background-color: royalblue;
             }
         }
+        /* @media를 통해 세로, 가로 중에 더 길이가 긴것으로 적용이 된다.
+        만약 가로, 세로 길이가 같다면 먼저 선언한 css가 설정된다.*/
 
     </style>
 </head>

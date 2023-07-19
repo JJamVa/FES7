@@ -12,28 +12,31 @@
 <body>
     <header>
         <div class="header-box">
-            <a href="login.html"><img src="./img/logo.svg" alt="main"></a>
-            <label>
-                <img src="./img/icon-join.svg" alt="logout">
-                <span>회원가입</span>
-            </label>
+            <h1>
+                <a href="login.html"><img src="./img/logo.svg" alt="main"></a>
+            </h1>
+            <a class="btn-join" href="./join.html">회원 가입</a>
         </div>
     </header>
-    <section>
-        <img src="./img/meta.png" alt="">
-        <h2>로그인</h2>
-        <label>
-            <p>이메일</p>
-            <input type="text">
-        </label>
-        <label>
-            <p>비밀번호</p>
-            <input type="password">
-        </label>
+    <main>
+        <section>
+            <img src="./img/meta.png" alt="">
+            <h2>로그인</h2>
+            <form class="form" method="post">
+                <div>
+                    <label for="user-email">이메일</label>
+                    <input id="user-email" type="email">
+                    <!-- 태그를 묶지 않고 for-id를 이용하여 생성 -->
+                </div>
 
-        <button type="submit">로그인</button>
+                <div>
+                    <label for="user-pw">비밀번호</label>
+                    <input id="user-pw" type="password">
+                </div>
 
-    </section>
+                <button type="submit">로그인</button>
+            </form>
+    </main>
     <footer>
         <p>Copyright 2023. WENIV All rights reserved.</p>
     </footer>
