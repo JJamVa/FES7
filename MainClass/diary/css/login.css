@@ -1,0 +1,30 @@
+body,p,h2,label{
+    padding: 0;
+    margin: 0;
+}
+header{
+    width:100%;
+    background-color: white;
+    border-bottom: 1px solid #eeeeee;
+
+}
+section, footer{
+    width: 100%;
+    background-color: #FFFAF0;
+}
+/* 초기 설정 및 배경 설정 */
+.header-box{
+    display: flex;
+    justify-content: space-between;
+    margin: 22px 108px 23px;
+}
+.header-box label{
+    display: flex;
+}
+.header-box label img{
+    height: 32px;
+    width: 32px;
+}
+.header-box label{
+    font-size: 14px;
+}
