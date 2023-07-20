@@ -51,14 +51,16 @@ section, footer{
     position: 10px 50%;
 }
 /* 헤더 설정 */
-section img{
-    
+
+.login-title{
+    display: flex;
+}
+.login-main form{
+    display: flex;
+    flex-direction: column;
 }
 
-.section-2{
-    display:flex;
-    text-align: center;
-}
+
 
 
 footer p{

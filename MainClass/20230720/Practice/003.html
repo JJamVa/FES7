@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D</title>
+    <style>
+        body{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            width: 400px;
+            height: 100px;
+            border: 3px dashed royalblue;
+            display: flex;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(223, 118, 58, 0.8);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        .box:nth-child(odd){
+            background-color: slateblue;
+        }
+
+        /* 3d */
+        .container{
+            perspective: 400px;
+            perspective-origin: 0 0;
+            /* 기준점 좌표를 잡는다. */
+        }
+        .box{
+            transform: rotateY(90deg);
+        }
+        .box:nth-chile(2){
+            transform: perspective(100px) rotateY(90deg);
+            /* transform을 작성할때, perspective(원근감)를 먼저 작성해야된다 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+    </div>
+</body>
+
+</html>

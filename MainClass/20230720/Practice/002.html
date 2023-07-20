@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srcset</title>
+    <style>
+        body{
+            margin:0;
+        }
+        img{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- picture -->
+    <picture>
+        <source media="(min-width:1024px)" srcset="../img/lication-chilli.png"
+        src="../img/lication-chilli.png">
+        <source media="(max-width:1023px)" srcset="../img/lication-chilli.png"
+        src="../img/lication-chilli2.png">
+    </picture>
+    <!--  -->
+    <img srcset="../img/chilli_360px.jpg 360w,../img/chilli_720px.jpg 720w,../img/chilli_1440px.jpg 1440w" src="../img/chilli_360px.jpg"
+    alt="다람쥐 캐릭터 칠리">
+</body>
+</html>
