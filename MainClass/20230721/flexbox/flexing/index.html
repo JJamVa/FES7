@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexing</title>
+    <style>
+        body {
+            background-color: brown;
+        }
+
+        .playground {
+            border: 10px solid maroon;
+            width: 980px;
+            margin: 0 auto;
+            border-radius: 20px;
+            background-color: skyblue;
+            display: flex;
+        }
+
+        .frog {
+            background-color: mediumseagreen;
+            color: lime;
+            font-size: 40px;
+            margin: 10px;
+            border: 6px solid green;
+            border-radius: 10px;
+            flex-basis: 0;
+            /* 기본 값. 컨텐츠의 크기만큼 width를 가진다. */
+            flex-grow: 0;
+            /* grow의 길이는 여백의 크기 비율을 나눠가진다. flex-basis의 값을 제외 */
+            flex-shrink: 1;
+            /* 구부러지지않는 정도 */
+            min-width: auto;
+
+            /* flex-basis:0을 하고 flex-grow를 하면 비율이 동등하게 설정된다. */
+            /* min-width: auto; 즉, flex안에 해당된 요소에 대한 글 및 이미지에 대한 크기를 자동적으로 공간 할당이 된다. */
+            /* flex-basis와 width 중 둘다 선언 되어있으면 어떻게 될까? */
+            /* width의 값은 무시되고 flex-basis 만큼 너비를 가지고 있다. */
+            /* flex-basis: auto가 width를 가져온다. 즉, width가 min-width 역할을 한다. */
+
+            /* width값만 적용하면 어떻게 되나? 그냥 적용된다.*/
+        }
+
+        .frog.covid {
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="playground">
+        <div class="frog">Frog</div>
+        <div class="frog">Frog</div>
+        <div class="frog">Frog</div>
+    </div>
+
+</body>
+
+</html>

@@ -12,6 +12,7 @@ body{
 .wrap{
     border: 2px dashed gray;
 }
+
 .card{
     width: 200px;
     height: 200px;
@@ -39,9 +40,11 @@ body{
 
     backface-visibility: hidden;
 }
+
 .front{
     background-color: rgba(46,139,45,0.8);
 }
+
 .back{
     background-color: rgba(131,123,134,0.8);
 

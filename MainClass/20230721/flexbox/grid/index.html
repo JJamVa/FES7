@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Grid System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            box-shadow: inset 0 0 20px red;
+            width: 600px;
+            margin: 100px auto;
+            display: flex;
+        }
+
+        .sidebar {
+            box-shadow: inset 0 0 20px blue;
+            flex-basis: 100px;
+            padding: 10px;
+            flex-basis: auto;
+            /* basis는 가변적으로 되고, width값은 절대적인거다. */
+            flex-shrink: 0;
+            /* 기본적으로 들어가있다. 0 값으로 공간을 확보한다.*/
+        }
+
+        .main {
+            box-shadow: inset 0 0 20px orangered;
+            flex-basis: auto;
+            flex-grow: 1;
+            padding: 10px;
+            min-width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="images/animal05.png" alt="">
+        </div>
+        <div class="main">Main</div>
+    </div>
+
+
+</body>
+
+</html>

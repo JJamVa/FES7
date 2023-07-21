@@ -1,0 +1,32 @@
+.wrapper{
+    box-shadow: inset 0 0 20px red;
+    width: 800px;
+    text-align: center;
+}
+.wrapper a{
+    background-color: orangered;
+    width: 200px;
+    height: 200px;
+    /* inline은 width,height 값이 적용안된다. */
+    /* margin: 20px; */
+    /* 상,하 margin은 되지 않는다. */
+    /* padding: 20px; */
+    display: inline-block;
+    /* vertical-align: top; */
+    /* vertical-align: baseline; */
+    /* baseline이 기본값 */
+    line-height: 200px;
+    /* line-height의 높이를 height의 크기만큼 넣는다. */
+
+    border-radius: 50%;
+}
+
+.fruit:nth-child(1){
+    background-color: lemonchiffon;
+}
+.fruit:nth-child(2){
+    background-color: orange;
+}
+.fruit:nth-child(3){
+    background-color: orangered;
+}
