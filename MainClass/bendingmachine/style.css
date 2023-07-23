@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #EAE8FE;
+    width: 100vw;
+}
+
+/* 초기화 작업 */
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 43px;
+}
+
+.title-img {
+    width: 386px;
+    height: 165px;
+}
+
+/*  위의 콜라 이미지 */
+
+.flex-wrapper {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* 전체를 플렉스 처리 */
+
+.left-box,
+.right-box {
+    width: 360px;
+    background-color: white;
+}
+
+.left-box {
+    padding-top:32px;
+    padding-bottom: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 초기 박스 사이즈 */
+
+.line1,
+.line2 {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.line1-1,
+.line1-2,
+.line1-3,
+.line2-1,
+.line2-2,
+.line2-3 {
+    width:94px;
+    height: 130px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0 #000000;
+}
+
+.line3,
+.line4 {
+    display: flex;
+    justify-content: center;
+    gap:12px;
+}
+
+.line3-1,
+.line4-1 {
+    width: 200px;
+    height: 32px;
+}
+
+.line3-1{
+    background-color: #EAE8FE;
+}
+
+.line3-2,
+.line4-2 {
+    width: 94px;
+    height: 32px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 0 #000000;
+}
+
+
+.line5{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.line5-1, .line5-2{
+    height: 106px;
+    border-radius: 5px;
+}
+
+.line5-1{
+    width: 200px;
+    box-shadow: 0 0 4px 0 #000000;
+}
+.line5-2{
+    width: 94px;
+    background-color: #6327Fe;
+}

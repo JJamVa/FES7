@@ -15,23 +15,26 @@
             <h1>
                 <a href="login.html"><img src="./img/logo.svg" alt="main"></a>
             </h1>
-            <a class="btn-join" href="./join.html">회원 가입</a>
+            <div class="title-img">
+                <img class="logo-img" src="./img/icon-join.svg" alt="">
+                <a class="btn-join" href="./join.html">회원 가입</a>
+            </div>
         </div>
     </header>
     <main>
         <section class="login-main">
-            <div class="login-title">
-                <img src="./img/meta.png" alt="">
-                <h2>로그인</h2>
+            <div class="logo-wrapper">
+                <img class="logo-image" src="./img/meta.png" alt="">
+                <h2 class="login">로그인</h2>
             </div>
             <form class="form" method="post">
-                <div>
+                <div class="email box">
                     <label for="user-email">이메일</label>
                     <input id="user-email" type="email">
                     <!-- 태그를 묶지 않고 for-id를 이용하여 생성 -->
                 </div>
 
-                <div>
+                <div class="pw box">
                     <label for="user-pw">비밀번호</label>
                     <input id="user-pw" type="password">
                 </div>
