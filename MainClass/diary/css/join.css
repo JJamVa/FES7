@@ -1,0 +1,113 @@
+body,
+header,
+div,
+h1,
+h2,
+a,
+main,
+section,
+form,
+label,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Pretendard';
+    background-color: #FFFAF0;
+    width: 100vw;
+}
+/* 초기 값 */
+header{
+    background-color: #FFFFFF;
+    padding-top: 23px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 22px;
+}
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 108px;
+}
+.title-img{
+    display:flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+.logo-img{
+    height:32px;
+    width:32px;
+}
+.header-box .btn-join {
+    font-weight: 700;
+    color:#5A6A72;
+    text-decoration: none;
+}
+
+.login-main{
+    padding-top: 75px;
+}
+
+.logo-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:29px;
+    margin-bottom:40px;
+}
+
+.login{
+    color: #29363D;
+    box-shadow: inset 0px -10px 0px 0px #ffd8d6;
+    text-decoration: 2px underline #fb4f6e;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.box{
+    width:392px;
+    display:flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: left;
+    border-radius: 4px 4px 0 0;
+}
+
+div label{
+    font: 14px
+}
+
+div input{
+    width: 100%;
+    height: 48px;
+    border-radius: 4px 4px 0 0;
+    border:none;
+    border-bottom: 1px solid #677880;
+}
+
+button[type="submit"]{
+    font-size: 16px;
+    width: 392px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: #29363D;
+    color:#F4F5F5;
+}
+
+footer{
+    color:#677880;
+    font-size: 12px;
+    margin-top: 52px;
+    text-align: center;
+}

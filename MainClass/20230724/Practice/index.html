@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜라 자판기</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>
+        <img src="./img/cola-logo.png" alt="cola cola">
+    </h1>
+    <main>
+        <section class="section1">
+            <h2 class="a11y-hidden">판매음료</h2>
+            <ul class="cola-list">
+                <li>
+                    <!-- JS : 클래스 on 유/무 제어 -->
+                    <button type="button" class="btn-cola on">
+                        <img src="./img/cola-original.png" alt="" />
+                        <span class="cola-name">Original_Cola</span>
+                        <strong class="cola-price">1000원</strong>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn-cola" disabled>
+                        <strong>품절</strong>
+                        <img src="./img/cola-violet.png" alt="" />
+                        <span class="cola-name">Violet_Cola</span>
+                        <strong class="cola-price">1000원</strong>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn-cola">
+                        <img src="./img/cola-yellow.png" alt="" />
+                        <span class="cola-name">Yellow_Cola</span>
+                        <strong class="cola-price">1000원</strong>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn-cola">
+                        <img src="./img/cola-cool.png" alt="" />
+                        <span class="cola-name">Cool_Cola</span>
+                        <strong class="cola-price">1000원</strong>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn-cola active">
+                        <img src="./img/cola-green.png" alt="" />
+                        <span class="cola-name">Green_Cola</span>
+                        <strong class="cola-price">1000원</strong>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn-cola">
+                        <img src="./img/cola-orange.png" alt="" />
+                        <span class="cola-name">Orange_Cola</span>
+                        <strong class="cola-price">1000원</strong>
+                    </button>
+                </li>
+            </ul>
+        </section>
+        <section class="section2">
+            section2
+        </section>
+        <section class="section3">
+            section3
+        </section>
+    </main>
+
+</body>
+
+</html>
