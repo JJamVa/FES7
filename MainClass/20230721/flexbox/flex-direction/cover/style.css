@@ -7,8 +7,13 @@ body {
 .cover {
     background-color: #222;
     color: white;
+    box-shadow: inset 0 0 100px red;
+    height: 600px;
+    display: flex;
 }
 .cover-logo {
+    box-shadow: inset 0 0 100px blue;
 }
 .cover-desciption {
+    box-shadow: inset 0 0 100px purple;
 }

@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Flexing</title>
-        <style>
-            body {
-                background-color: brown;
-            }
-            .playground {
-                border: 10px solid maroon;
-                width: 980px;
-                margin: 0 auto;
-                border-radius: 30px;
-                background-color: skyblue;
-            }
-            .frog {
-                background-color: mediumseagreen;
-                color: lime;
-                font-size: 40px;
-                border: 6px solid green;
-                border-radius: 10px;
-            }
-        </style>
-    </head>
-    <body>
 
-        <div class="playground">
-            <div class="frog">Frog</div>
-        </div>
+<head>
+    <title>Flexing</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: brown;
+            box-shadow: : inset 0 0 100px blue;
+            height: 100vh;
+            display: flex;
+        }
 
-    </body>
+        .playground {
+            border: 10px solid maroon;
+            width: 980px;
+            margin: auto auto;
+            border-radius: 30px;
+            background-color: skyblue;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .frog {
+            background-color: mediumseagreen;
+            color: lime;
+            font-size: 40px;
+            margin: 10px;
+            border: 6px solid green;
+            border-radius: 10px;
+            flex-basis: 200px;
+            /* flex-basis 200px를 주고 width의 크기보다 커지면 개구리 한마리를 더 넣으면 크기가 작아진다. 규칙적으로 다 넣어준다.*/
+            /* 만약 content의 최소 값을 가질 경우, 최소값을 유지하고 개구리들은 넘쳐흐른다. */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="playground">
+        <div class="frog"><img src="images/frog.png" alt=""></div>
+        <div class="frog"><img src="images/frog.png" alt=""></div>
+    </div>
+
+</body>
+
 </html>
