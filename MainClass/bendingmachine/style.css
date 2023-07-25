@@ -149,6 +149,22 @@ header {
 .line5-1 {
     width: 200px;
     box-shadow: 0 0 4px 0 #000000;
+
+    overflow: hidden;
+}
+
+.line5-1 ul{
+    padding-top: 12px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+.line5-1 ul li{
+    width: 170px;
+    height: 46px;
 }
 
 .line5-2 {
@@ -195,6 +211,12 @@ header {
 .sec-box {
     background-color: #ffffff;
 }
+.sec-box h2 {
+    margin-top: 25px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 13px;
+}
 
 .sb-content {
     height: 364px;
@@ -203,13 +225,7 @@ header {
     border: 1px solid #c1c1c1;
     margin-left: 27px;
     margin-right: 27px;
-    margin-bottom: 52px;
-}
-.sec-box h2 {
-    margin-top: 25px;
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 13px;
+    margin-bottom: 6px;
 }
 
 .list-content {
@@ -226,12 +242,29 @@ li {
     background-color: #ffffff;
     list-style: none;
     height: 46px;
-    width: 276px;
+    width: 260px;
+}
+
+.img-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 8px;
+}
+
+.img-content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.img-content img{
+    width: 18px;
+    height: 33px;
 }
 
 .output{
-    margin-top: 6px;
-    margin-bottom: 26px;
+    margin-bottom: 46px;
     margin-right: 30px;
     text-align: right;
 }
