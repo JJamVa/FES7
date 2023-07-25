@@ -6,118 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login Page</title>
-    <style>
-        /* ctrl + shift 하고 클릭하면 복수 선택가능 */
-        * {
-            padding: 0;
-            margin: 0;
-            font-size: inherit;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        body {
-            width: 100vw;
-            background-color: #e5e5e5;
-        }
-
-        /* 초기화 작업 */
-
-        .wrapper {
-            background-color: #ffffff;
-            width: 520px;
-        }
-
-        /* 제일 큰테두리 작업 */
-
-        header {
-            border-radius: 10px 0 0 10px;
-            border-bottom: 1px solid #C4C4C4;
-        }
-
-        header h1 {
-            text-align: center;
-        }
-
-        /* header에 대한 작업 */
-
-        main {
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-
-        /* header 밑에 있는 몸통 초기 크기 잡는 곳 */
-
-        .line {
-            text-align: center;
-        }
-
-
-
-        .login-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            position: relative;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        button {
-            background-color: #ffffff;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            background-position: 12px 50%;
-            background-repeat: no-repeat;
-            border-radius: 5px;
-        }
-
-        button:nth-child(1) {
-            background-image: url(./images/Google__G__Logo\ 1.png);
-            border: 1px solid #767676;
-        }
-
-        button:nth-child(2) {
-            background-image: url(./images/facebook.png);
-            border: 1px solid #2D9CDB;
-        }
-
-        button:nth-child(3) {
-            background-image: url(./images/naver-logo.png);
-            border: 1px solid #00BF18;
-        }
-
-        .last-button {
-            background-image: url(./images/message-circle.png);
-            border: 1px solid #F2C94C;
-        }
-    </style>
+    <link rel="stylesheet" href="loginPage.css">
 </head>
 
 <body>
     <div class="wrapper">
         <header>
             <h1>로그인 또는 회원가입</h1>
+            <div class="x-btn"></div>
         </header>
         <main>
-            <h2>위니브에서 여러분의 궁금증을 해결하세요!:)</h2>
+            <h2>위니브에서 여러분의 궁금증을 해결하세요! :)</h2>
             <div class="input-content">
                 <input type="text" placeholder="아이디">
                 <input type="password" placeholder="비밀번호">
             </div>
 
-            <div>로그인 상태 유지</div>
+            <div class="state">
+                <span class="login-state">
+                    로그인 상태 유지
+                </span>
+            </div>
 
             <button class="login-button" type="submit">로그인</button>
 
-            <div><a href="#">회원가입</a> | <a href="#">아이디/비밀번호 찾기</a></div>
+            <div class="register">
+                <a class="start" href="#">회원가입</a>
+                <span class="split">|</span>
+                <a class="end" href="#">아이디/비밀번호 찾기</a>
+            </div>
 
             <div class="line">
                 <span class="string-line">또는</span>
             </div>
-            <section>
+            <section class="icon-btn">
                 <form class="login-form">
                     <button type="button">구글 계정으로 로그인</button>
                     <button type="button">페이스북 계정으로 로그인</button>
