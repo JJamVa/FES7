@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        img {
+            position: absolute;
+            clip: rect(0, 100px,  100px, 0);
+            /* clip은 꼭 position: absolute 속성과 같이 써야지 실행한다. */
+            /* MDN에서는 Deprecated가 되어있다.(권장하지 않는다는 의미) */
+            /* 네이버는 왜 사용하나? -> 예전 브라우저 호환 */
+
+            /* 다가릴려면 clip-path: inset(-50%)를 사용하면 다가려진다. */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="http://image.newsis.com/2021/09/06/NISI20210906_0000823263_web.jpg" alt="">
+    </div>
+</body>
+
+</html>

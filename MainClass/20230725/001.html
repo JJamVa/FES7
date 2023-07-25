@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .txt-hide{
+            width: 1px;
+            height: 1px;
+            /* width,height를 0px로 주면 스크린리더기가 못 읽기때문에 */
+            overflow: hidden;
+            clip-path: inset(50%);
+            /* clip-path 경로에 따라서 자른다. */
+            /* inset()을 사용하면 네모요소를 자른다. */
+        }
+        .input-hold{
+            position: relative;
+        }
+        
+        .lable-hold::before{
+            display: inline-block;
+            content: '';
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+            border:1px solid black;
+            vertical-align: -5px;
+            /* 수직 정렬 처리 */
+        }
+
+        .input-hold:focus-visible+.lable-hold::before{
+            outline: 3px solid teal;
+            outline-offset: 3px;
+            /* outline-offset은 outline의 범위를 얼마나 더 확장 할지 */
+        }
+
+
+        .lable-hold::after{
+            content:'';
+            position:absolute;
+            left: 32px;
+
+            width: 22px;
+            height: 22px;
+            /* background-image: url(./images/checkmark.png);
+            background-size: 22px;
+            background-repeat: no-repeat; */
+            background: url(./images/checkmark.png) 0 0/22px no-repeat;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        .input-hold:checked+.lable-hold::after{
+            left: 22px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <input class="txt-hide input-hold" type="checkbox" name="" id="input-hold">
+    <label for="input-hold" class="lable-hold">로그인 상태 유지</label>
+</body>
+</html>
