@@ -95,36 +95,48 @@ main {
 }
 
 .state {
-    position: relative;
     margin-top: 16px;
     margin-bottom: 20px;
     padding-left: 30px;
+    position:relative;
 }
-.login-state{
+.box{
     font-weight:500;
     color: #767676;
     font-size:16px;
 }
 
-.state .login-state::before {
+/* 여기서부터 로그인 상태 유지 구현해야됨. 커스텀 */
+.txt-hide{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+.box::after{
     position: absolute;
-    display: inline;
-    content: "";
-    width: 22px;
-    height: 22px;
-    background-color: #ffffff;
+    content:"";
+    width:22px;
+    height:22px;
     border: 1px solid #767676;
     border-radius: 50%;
-    left: 0px;
+    left:0;
+    cursor:pointer;
     background-image: url(./images/check.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
 
-.state:active .login-state::before{
-    border: 1px solid blue;
+input[type="checkbox"]:checked+.box::after{
     background-color: blue;
 }
+
+
+
+/* 여기까지 */
+
+
 
 .login-button {
     font-weight: 700;
