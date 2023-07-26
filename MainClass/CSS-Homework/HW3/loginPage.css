@@ -4,6 +4,7 @@
     font-weight: 400;
     font-style: normal;
 }
+
 /* 폰트 */
 
 
@@ -48,7 +49,7 @@ header {
 header h1 {
     text-align: center;
     font-family: 500;
-    font-size:16px;
+    font-size: 16px;
 }
 
 header .x-btn {
@@ -67,8 +68,8 @@ header .x-btn {
 main h2 {
     margin-top: 26px;
     margin-bottom: 24px;
-    font-size:20px;
-    font-weight:500;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 /* header2에 대한 작업 */
@@ -83,58 +84,81 @@ main {
 .input-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    position: relative;
 }
 
 .input-content input {
-    border: 1px solid #C4C4C4;
+    border: 2px solid #F4492E;
     border-radius: 5px;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 16px;
 }
 
+label[for="id"],
+label[for="pw"] {
+    color: #F4492E;
+    font-weight: 400;
+    font-size:14px;
+    padding-left: 4px;
+}
+
+.input-content #id {
+    margin-bottom: 6px;
+}
+
+.input-content label[for="id"] {
+    margin-bottom: 10px;
+}
+
+.input-content #pw {
+    margin-bottom: 10px;
+}
+
+
 .state {
-    margin-top: 16px;
+    margin-left:4px;
+    margin-top: 12px;
     margin-bottom: 20px;
     padding-left: 30px;
-    position:relative;
+    position: relative;
 }
-.box{
-    font-weight:500;
+
+.box {
+    font-weight: 500;
     color: #767676;
-    font-size:16px;
+    font-size: 16px;
 }
 
 /* 여기서부터 로그인 상태 유지 구현해야됨. 커스텀 */
-.txt-hide{
+.txt-hide {
     width: 1px;
     height: 1px;
     overflow: hidden;
     clip-path: inset(50%);
 }
 
-.box::after{
+.box::after {
     position: absolute;
-    content:"";
-    width:22px;
-    height:22px;
+    content: "";
+    width: 22px;
+    height: 22px;
     border: 1px solid #767676;
     border-radius: 50%;
-    left:0;
-    cursor:pointer;
+    left: 0;
+    cursor: pointer;
     background-image: url(./images/check.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
 
-input[type="checkbox"]:checked+.box::after{
-    background-color: blue;
+input[type="checkbox"]:checked+.box::after {
+    background-image: url(./images/check-white.svg);
+    background-color: #2F80ED;
+    border: 1px solid #2F80ED;
 }
 
-
-
-/* 여기까지 */
+/* 여기까지(완료) */
 
 
 
@@ -169,9 +193,9 @@ input[type="checkbox"]:checked+.box::after{
     color: #767676;
 }
 
-.split{
-    padding-left:12px;
-    padding-right:12px;
+.split {
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 
@@ -208,7 +232,7 @@ input[type="checkbox"]:checked+.box::after{
 }
 
 button {
-    font-weight:500;
+    font-weight: 500;
     color: #767676;
     background-color: #ffffff;
     padding-top: 10px;
