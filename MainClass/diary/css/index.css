@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Pretendard';
+    background-color: #FFFAF0;
+    width: 100vw;
+}
+
+header {
+    background-color: #FFFFFF;
+    padding-top: 23px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 22px;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 108px;
+}
+
+.right-header {
+    display: flex;
+    gap: 8px;
+}
+
+.right-header div strong {
+    box-shadow: inset 0px -10px 0px 0px #ffd8d6;
+}
+
+.bar {
+    color: #D8DDDE;
+}
+
+.title-img {
+    position: relative;
+    display: flex;
+}
+
+.logo-img {
+    position: absolute;
+    top: -6px;
+}
+
+.header-box .btn-join {
+    padding-left: 32px;
+    font-weight: 700;
+    color: #5A6A72;
+    text-decoration: none;
+}
+
+/* 위는 header 영역 css 작성 */
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 412px;
+    margin-top: 56px;
+}
+
+.left-title {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.left-title h2 {
+    margin-top: 6.5px;
+    margin-bottom: 6.5px;
+    color: #29363D;
+    font-size: 16px;
+}
+
+.left-writing {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+input[placeholder="제목"] {
+    padding-left: 15px;
+    height: 48px;
+    border-radius: 4px 4px 0 0;
+    border: none;
+    border-bottom: 1px solid #677880;
+}
+
+input[placeholder="오늘의 비밀은 무엇인가요?"] {
+    padding-left: 16px;
+    padding-top: 14px;
+    padding-bottom: 326px;
+    border-radius: 4px;
+    border: 1px solid #677880;
+}
+
+.left-writing button {
+    height: 48px;
+    border-radius: 4px;
+    border: none;
+    background-color: #29363D;
+    color: #F4F5F5;
+}
+
+/* 왼쪽영역 대략적으로 구현 완료 */
+
+.redbar {
+    width: 2px;
+    height: 5000px;
+    background-color: #FF4F6E;
+}
+
+/* 가운데 라인 css 작성 */
+/* 밑에부턴 오른쪽 박스 생성 */
+ul {
+    margin-top: 78px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+li {
+    border-top: 5px solid #677880;
+    max-width: 728px;
+    position: relative;
+}
+
+article {
+    margin-top: 3px;
+    padding: 64px 48px;
+    border: 1px solid #677880;
+}
+
+.box-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.box-title p {
+    padding-top: 10px;
+}
+
+.inner-box::before {
+    position: absolute;
+    background-color: #FFFAF0;
+    content: "";
+    background-image: url(./../img/quote-start.svg);
+    width: 80px;
+    height: 40px;
+    top: -8%;
+}
+
+.inner-box::after {
+    position: absolute;
+    background-color: #FFFAF0;
+    content: "";
+    background-image: url(./../img/quote-end.svg);
+    width: 80px;
+    height: 40px;
+    right: 4%;
+    bottom: -8%;
+}
+.box-title h2{
+    font-size: 16px;
+}
+.box-title p{
+    font-size: 12px;
+}
+.inner-box .box-content, .inner-box .box-title p{
+    color: #5A6A72;
+}
