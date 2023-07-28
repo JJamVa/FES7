@@ -60,7 +60,10 @@ header{
     gap:29px;
     margin-bottom:40px;
 }
-
+.logo-image{
+    width: 250px;
+    height: 120px;
+}
 .login{
     color: #29363D;
     box-shadow: inset 0px -10px 0px 0px #ffd8d6;
