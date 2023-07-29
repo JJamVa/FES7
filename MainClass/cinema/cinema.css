@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&family=Roboto+Condensed:ital,wght@1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+    height: 100vw;
+}
+
+.wrapper {
+    min-width:1060px;
+    margin-top: 66px;
+    margin-left: 430px;
+    margin-right: 430px;
+    background-color: #f2f2f2;
+    border: 2px solid #BDBDBD;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    margin-top: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 37px;
+}
+
+header .info-list {
+    display: flex;
+    padding: 28px 139px;
+    gap: 60px;
+    border-top: 2px solid #BDBDBD;
+}
+
+/* 위에는 header에 대한 css 코드작성 */
+main {
+    display: flex;
+    background-color: white;
+    padding: 26px 26px 30px;
+    margin-left: 28px;
+    margin-right: 28px;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #BDBDBD;
+    border-radius: 10px;
+}
+
+section img {
+    border-radius: 10px;
+    width: 180px;
+    height: 250px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 19px;
+    margin-bottom: 11px;
+}
+
+section h2 {
+    align-self: flex-start;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 12px;
+    margin-left:20px;
+    font-size: 16px;
+}
+.information{
+    align-self: flex-start;
+    margin-left: 20px;
+    font-size:13px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+span {
+    color: #828282;
+    margin-right: 5px;
+}
+
+.row-info {
+    display: flex;
+    gap: 42px;
+}
+
+.star-line{
+    position: relative;
+}
+.star-line span{
+    margin-right: 13px;
+}
+.star-line span::after{
+    content:"";
+    position: absolute;
+    background-image: url(./img/icon-star.svg);
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 13px;
+    top: 10%;
+    left:40%;
+}
+
+
+/* 밑은 버튼 코드 */
+
+.btn {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 18px;
+    display: flex;
+    position: relative;
+}
+
+.reserve {
+    padding-top: 9px;
+    padding-bottom: 12px;
+    flex-basis: 107px;
+    border-radius: 0 0 0 10px;
+    border: 1px solid #BDBDBD;
+}
+
+.preview {
+    flex-grow: 1;
+    flex-basis: 113px;
+    padding-left: 12px;
+    border-radius: 0 0 10px 0;
+    background-image: url(./img/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: 24px 50%;
+    border: 1px solid #BDBDBD;
+}
