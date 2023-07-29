@@ -42,6 +42,10 @@ header {
     gap: 37px;
 }
 
+.bold-liter{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 header .info-list {
     display: flex;
     padding: 28px 139px;
@@ -53,10 +57,12 @@ header .info-list {
 main {
     display: flex;
     background-color: white;
-    padding: 26px 26px 30px;
+    border-radius: 15px;
+    border: 1px solid #BDBDBD;
+    padding: 26px 27px 30px;
     margin-left: 28px;
     margin-right: 28px;
-    justify-content: space-between;
+    margin-bottom: 31px;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -67,16 +73,13 @@ section {
     align-items: center;
     border: 1px solid #BDBDBD;
     border-radius: 10px;
+    box-shadow: 0 0 5px 0 #000000;
 }
 
 section img {
     border-radius: 10px;
-    width: 180px;
-    height: 250px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 19px;
-    margin-bottom: 11px;
+    margin: 19px 20px 11px;
+    box-shadow: 0 4px 4px 0 #BDBDBD;
 }
 
 section h2 {
@@ -101,14 +104,14 @@ span {
 
 .row-info {
     display: flex;
-    gap: 42px;
+    gap: 40px;
 }
 
 .star-line{
     position: relative;
 }
 .star-line span{
-    margin-right: 13px;
+    margin-right: 10px;
 }
 .star-line span::after{
     content:"";
@@ -142,7 +145,6 @@ span {
 }
 
 .preview {
-    flex-grow: 1;
     flex-basis: 113px;
     padding-left: 12px;
     border-radius: 0 0 10px 0;
@@ -151,3 +153,5 @@ span {
     background-position: 24px 50%;
     border: 1px solid #BDBDBD;
 }
+
+/* footer 밑 작업 */
