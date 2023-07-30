@@ -93,7 +93,7 @@
         var start = new Date('2022-06-30');
 
         // 오늘 날짜 출력
-        $('.d-flex .date').text(`${now.getFullYear()}.${now.getMonth()}.${now.getDate()}`)
+        $('.d-flex .date').text(`${now.getFullYear()}.${now.getMonth() + 1}.${now.getDate()}`)
 
         //우리 몇 일째?
         var meeting = now.getTime() - start.getTime();
