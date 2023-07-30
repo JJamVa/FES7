@@ -53,6 +53,7 @@ header h1 {
 }
 
 header .x-btn {
+    cursor: pointer;
     width: 16px;
     height: 16px;
     position: absolute;
