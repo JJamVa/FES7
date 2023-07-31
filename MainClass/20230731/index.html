@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 이미지</title>
+    <style>
+        img{
+            width: 100%;
+            /* style없이 img만 가져온다면 줄여도 변하지 않지만 값을 지정해준다면 동적으로 조절이 가능 */
+            max-width: 100%;
+            /* 원본 사진의 크기를 100%로 유지해준다. */
+        }
+        body{
+            margin:0;
+        }
+        article{
+            width:100vw;
+            height:100vh;
+            background: url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfHw%3D&w=1000&q=80") center/contain no-repeat;
+            /* background-repeat: no-repeat; */
+            /* background-size: cover; */
+            /* cover는 무조건 할당된 공간에서 다 찬다. */
+            /* contain은 원본을 유지하고 원본보다 작아지면 반응형으로 비율을 유지한다. */
+            /* background-position: 50% 50%; */
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <img src="" alt="">
+    </article>
+</body>
+
+</html>
