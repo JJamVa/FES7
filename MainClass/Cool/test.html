@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿨찐 테스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">쿨찐 테스트</a>
+    </header>
+    <section>
+        <article>
+            <h2>문제2</h2>
+            <p>설명1</p>
+            <input type="radio" name="question1" class="yes-button"><span>yes</span>
+            <input type="radio" name="question1" class="no-button"><span>No</span>
+            <input type="radio" name="question1" class="maybe-button"><span>Maybe</span>
+        </article>
+        <article>
+            <h2>문제2</h2>
+            <p>설명1</p>
+            <input type="radio" name="question2" class="yes-button"><span>yes</span>
+            <input type="radio" name="question2" class="no-button"><span>No</span>
+            <input type="radio" name="question2" class="maybe-button"><span>Maybe</span>
+        </article>
+        <footer>
+            <a onclick="result();">결과보기</a>
+        </footer>
+        <script>
+            function result() {
+                let yes_count = 0;
+                let no_count = 0;
+
+                let yes_element = document.getElementsByClassName("yes-button");
+                let no_element = document.getElementsByClassName("no-button");
+                let maybe_element = document.getElementsByClassName("maybe-button");
+                // console.log(element);
+                for(let idx = 0; idx < yes_element.length; idx++){
+                    if(yes_element[idx].checked || maybe_element[idx].checked) yes_count++;
+                    else if(no_element[idx].checked) no_count++;
+                }
+
+                // console.log(yes_count, no_count);
+                let link = "";
+
+                if(yes_count + no_count !== 2){
+                    alert("모든 문제에 답해주세요.")
+                    return;
+                }
+
+                yes_count === 2 ? link = "result_3.html" : yes_count === 1 ? link = "result_2.html" : link = "result_1.html"
+                location.href=link;
+                // a태그 처럼 동작하게 해준다.
+            }
+        </script>
+    </section>
+</body>
+
+</html>

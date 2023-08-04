@@ -1,0 +1,209 @@
+/* 전체 body를 위한 기본 스타일 */
+body {
+    font-family: sans-serif;
+    font-size: 13pt;
+    font-weight: 300;
+    color: #7c8081;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+/* 하이퍼링크 밑에 밑줄은 이제 너무 올드하다 */
+body a {
+    text-decoration: none;
+}
+
+/* 화면 상단 부분을 위한 intro 클래스 */
+.intro {
+    color: #ffffff;
+    /* 쿨찐이니까 배경도 쿨하게 */
+    background-color: #01aef2;
+    padding: 12em 0 12em 0;
+    text-align: center;
+}
+
+/* 첫 페이지 외에 다른 페이지에서는 낮은 제목을 사용하고 싶을때 */
+.intro.small {
+    padding: 2em 0 2em 0;
+}
+
+/* 제목 위 아래에만 줄을 추가해서 장식해보자 */
+.intro header {
+    display: inline-block;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    padding: 3px 0 3px 0;
+}
+
+/* 제목은 크고 두껍게 */
+/* 그리고 위 아래에도 한 줄씩 더 추가해서 두 줄로 만들어보자 */
+.intro header h2 {
+    font-size: 1.5em;
+    font-weight: 900;
+    /* 자간 */
+    letter-spacing: 0.2em;
+    /* 줄간 */
+    line-height: 1.5em;
+    margin: 0;
+    /* 안쪽에 여백을 추가해서 두 줄이 글자 밖으로 살짝 나오게 해보자 */
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-bottom: solid 2px;
+    border-top: solid 2px;
+}
+
+.intro header a {
+    color: inherit;
+}
+
+.intro section {
+    margin: 2em 0 2em 0;
+}
+
+/* p 태그는 기본적으로 위 아래 한줄씩 여백을 갖기 때문에 margin을 0으로 주면 바깥 여백을 없앨 수 있다 */
+.intro section p {
+    margin: 0;
+}
+
+/* 각 질문에 대한 스타일을 정해보자 */
+article {
+    color: inherit;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 10%;
+    padding-right: 10%;
+    /* 각 질문마다 아래 밑줄 추가 */
+    border-bottom: #eeeeee;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+}
+
+#contents {
+    /* 텍스트는 모두 가운데정렬 */
+    text-align: center;
+}
+
+/* 결과 페이지의 section을 꾸미기 위한 부분 */
+#contents header {
+    padding: 2em 2em 0em 2em;
+}
+
+#contents header img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#contents section {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#contents footer {
+    padding: 2em 2em;
+}
+
+/* 화면 하단부의 배경색상과 글자색 여백을 지정 */
+/* 은은한 회색톤의 배경과 글자색 */
+.bottom {
+    padding: 3em 1.5em;
+    background: #E8EEF4;
+    color: #7c8081;
+    text-align: center;
+}
+
+footer div {
+    margin-bottom: 2em;
+}
+
+/* copyright는 조금 특별하게 써보자 */
+footer .copyright {
+    font-size: 0.8em;
+    line-height: 1em;
+    display: inline-block;
+}
+
+footer .copyright a {
+    color: inherit;
+    border-bottom: dotted 1px;
+}
+
+/* 예쁜 버튼을 복붙 */
+.button-label {
+    display: inline-block;
+    padding: 0em 2em;
+    margin: 0.5em;
+    cursor: pointer;
+    color: #292929;
+    border-radius: 0.25em;
+    background: #efefef;
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+    transition: 0.3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button-label h3 {
+    font-size: 13pt;
+    font-family: sans-serif;
+}
+
+.button-label:hover {
+    background: #d6d6d6;
+    color: #101010;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.32);
+}
+
+.button-label:active {
+    transform: translateY(2px);
+    box-shadow: inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 40em) {
+    .button-label {
+        padding: 0em 1em 3px;
+        margin: 0.25em;
+    }
+}
+
+/* test.html 제일 아래 버튼은 파란색을 하고 싶다 */
+/* 우리가 가져온 rgb 버튼에서 class만 추가해서 색깔만 바꾸기 */
+.button-label.blue {
+    color: #ffffff;
+    background-color: #01aef2;
+}
+
+.yes-button:checked+.button-label {
+    background: #2ECC71;
+    color: #efefef;
+}
+
+.yes-button:checked+.button-label:hover {
+    background: #29b765;
+    color: #e2e2e2;
+}
+
+.no-button:checked+.button-label {
+    background: #D91E18;
+    color: #efefef;
+}
+
+.no-button:checked+.button-label:hover {
+    background: #c21b15;
+    color: #e2e2e2;
+}
+
+.maybe-button:checked+.button-label {
+    background: #4183D7;
+    color: #efefef;
+}
+
+.maybe-button:checked+.button-label:hover {
+    background: #2c75d2;
+    color: #e2e2e2;
+}
+
+.hidden {
+    display: none;
+}
