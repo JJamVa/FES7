@@ -100,7 +100,7 @@ label[for="id"],
 label[for="pw"] {
     color: #F4492E;
     font-weight: 400;
-    font-size:14px;
+    font-size: 14px;
     padding-left: 4px;
 }
 
@@ -118,7 +118,7 @@ label[for="pw"] {
 
 
 .state {
-    margin-left:4px;
+    margin-left: 4px;
     margin-top: 12px;
     margin-bottom: 20px;
     padding-left: 30px;
@@ -203,11 +203,30 @@ input[type="checkbox"]:checked+.box::after {
 /* 또는 */
 .line {
     color: #767676;
-    margin-bottom: 20px;
+    margin-bottom: 29px;
     position: relative;
+    /* background-color: slateblue; */
 }
 
-.string-line::before,
+.silver-line {
+    top: 50%;
+    height: 1px;
+    background-color: #c4c4c4;
+    width: 100%;
+}
+
+.string-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    /* background-color: black; */
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+/* .string-line::before,
 .string-line::after {
     content: "";
     position: absolute;
@@ -215,15 +234,19 @@ input[type="checkbox"]:checked+.box::after {
     background-color: #C4C4C4;
     height: 1px;
     width: 210px;
-}
+} */
 
-.string-line::before {
+
+
+/* .string-line::before {
     left: 0;
 }
 
 .string-line::after {
     right: 0;
-}
+} */
+
+/* 위의 코드는 동작은 정상적으로 하나 viewport를 400%이상을 부여할 시 선이 깨져버림. */
 
 .login-form {
     display: flex;
