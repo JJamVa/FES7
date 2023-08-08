@@ -23,6 +23,7 @@ a {
 body {
     width: 100vw;
     min-height: 100vh;
+    /* min-height로 줘야지 전체를 다보여준다 */
     display: flex;
     align-items: center;
     justify-content: center;
