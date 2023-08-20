@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .color {
+            width: 500px;
+            height: 500px;
+        }
+
+        .button {
+            display: flex;
+            gap: 200px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="color"></div>
+        <ul class="button">
+            <li><button class="btn-red">빨강</button></li>
+            <li><button class="btn-yellow">노랑</button></li>
+            <li><button class="btn-green">초록</button></li>
+        </ul>
+    </div>
+    <script>
+        let background = document.querySelector(".color")
+        let btn = document.querySelectorAll("button")
+
+        btn.forEach((e) => {
+            e.addEventListener('click', () => {
+                background.classList.remove("red", "yellow", "green");
+                if (e.classList.contains('btn-red')) background.classList.add('red');
+                else if (e.classList.contains('btn-yellow')) background.classList.add('yellow');
+                else if (e.classList.contains('btn-green')) background.classList.add('green');
+            })
+        })
+
+    </script>
+</body>
+
+</html>

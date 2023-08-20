@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>Practice</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button class="btn">클릭</button>
+    </div>
+
+    <script>
+        const btn = document.querySelector("button");
+
+        btn.addEventListener("click", function () {
+            console.log(btn.classList.contains("btn"));
+            console.log(btn.classList.contains("clicked"));
+        });
+
+    </script>
+</body>
+
+</html>
