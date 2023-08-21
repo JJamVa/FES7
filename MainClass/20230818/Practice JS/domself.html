@@ -56,14 +56,6 @@
         let background = document.querySelector(".color")
         let btn = document.querySelectorAll("button")
 
-        btn.forEach((e) => {
-            e.addEventListener('click', () => {
-                background.classList.remove("red", "yellow", "green");
-                if (e.classList.contains('btn-red')) background.classList.add('red');
-                else if (e.classList.contains('btn-yellow')) background.classList.add('yellow');
-                else if (e.classList.contains('btn-green')) background.classList.add('green');
-            })
-        })
 
     </script>
 </body>
