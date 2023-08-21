@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form action="">
+        <button type="button" class="submit">제출</button>
+    </form>
+    <script>
+        const btn = document.querySelector(".submit");
+
+        btn.addEventListener('click', (event) => {
+            event.preventDefault();
+            console.log('submit');
+        })
+
+        document.body.addEventListener('click', () => {
+            console.log('event still alive')
+        })
+    </script>
+</body>
+</html>

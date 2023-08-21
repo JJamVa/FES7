@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        const me = {
+            name: '한재현',
+            address: '제주도 제주시 인다 1길',
+            phoneNum: '010-8000-0000',
+            canWalk: function () {
+                console.log('재현이가 걷는다.');
+            },
+            teaching: function (student) {
+                student.levelUp();
+            }
+        }
+        const lion = {
+            level: 1,
+            levelUp: function () {
+                this.level++;
+            }
+        }
+        me.teaching(lion);
+
+        const arr = new Array(1,2,3);
+        
+        function Factory(name) {
+            this.name = name
+        }
+
+        const robot = new Factory('JJamVa')
+
+        robot.name = '준홍'
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function RobotFactory(foodNames) {
+            this.item = foodNames[parseInt(Math.random() * foodNames.length)]
+            this.console = function() {
+                console.log(`오늘의 메뉴는 ${this.item} 입니다.`)
+            }
+
+        }
+
+        const robot = new RobotFactory(['청국장', '물냉면', '돔배고기', '곱창', '제육'])
+        robot.console();
+    </script>
+</body>
+
+</html>

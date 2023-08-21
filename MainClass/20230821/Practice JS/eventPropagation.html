@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <article class="wrapper">
+        <button class="btn" type="button">버튼</button>
+    </article>
+
+    <script>
+        const wrapper = document.querySelector(".wrapper");
+        const btn = document.querySelector(".btn");
+        btn.addEventListener(
+            "click",
+            (event) => {
+                console.log("btn capture!");
+            },
+            true
+        ); // addEventListeneer() 두번째 Argument값은 캡처링 옵션이다.
+
+        window.addEventListener(
+            "click",
+            () => {
+                console.log("window capture!");
+            },
+            true
+        );
+
+        document.addEventListener(
+            "click",
+            () => {
+                console.log("document capture!");
+            },
+            true
+        );
+
+        wrapper.addEventListener(
+            "click",
+            () => {
+                console.log("wrapper capture!");
+            },
+            true
+        );
+
+        btn.addEventListener("click", (event) => {
+            console.log("btn bubble!");
+        });
+
+        wrapper.addEventListener("click", () => {
+            console.log("wrapper bubble!");
+        });
+
+        document.addEventListener("click", () => {
+            console.log("document bubble!");
+        });
+
+        window.addEventListener("click", () => {
+            console.log("window bubble!");
+        });
+    </script>
+</body>
+
+</html>
