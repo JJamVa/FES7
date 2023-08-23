@@ -14,10 +14,15 @@
     </form>
     <script>
         const submit = document.querySelector(".submit");
+
         submit.addEventListener("click", (event) => {
-            console.log("clicked");
+            console.log("클릭!");
             event.preventDefault();
         });
+
+        document.body.addEventListener("click", (event) => {
+            console.log("이벤트 발생!!!!!!");
+        },true);
     </script>
 </body>
 
