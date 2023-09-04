@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        class UserStorage {
+            // 사용자가 입력한 값과 유저 정보가 일치하는 유저를 찾는다.
+            searchUser(userName, password, onSuccess, onError) {
+                // 성공하면 onSuccess 콜백함수를 부름. 실패하면 onError.'
+                const requestObj = new XMLHttpRequest();
+                requestObj.open("GET", "users.json"); // 요청 초기화
+                requestObj.onreadystatechange = () => {
+                    if (requestObj.readyState === 4 && requestObj.status === 200) {
+                        const result = JSON.parse(requestObj.responseText).user.find((item) => {
+                            // JSON.parse : json을 parse해서 객체로 만들어줌.
+                            // stringify : 객체를 json으로
+                            return item.userName === userName && item.password === password;
+                            // item의 유저네임과 password가 입력받은 유저네임과 password가 같은지 확인함.
+                        });
+                        if (result) {
+                            // 일치하는 유저가 존재하면,
+                            onSuccess(userName);
+                            //userName을 전달해서 인사말에 맞는 이름을 찾아야됨.
+                        } else {
+                            onError(new Error("user not found")); // 사용자 정의 에러 생성자 : 에러 메세지를 사용자 마음대로 만들 수 있다.
+                        }
+                    }
+                };
+                requestObj.send(); // 요청 보내기
+            }
+
+            // 유저에 맞는 인사말을 출력합니다.
+            sayHi(user, onSuccess, onError) {
+                const requestObj = new XMLHttpRequest();
+                requestObj.open("GET", "greetings.json"); // 요청 초기화
+                requestObj.onreadystatechange = () => {
+                    if (requestObj.readyState === 4 && requestObj.status === 200) {
+                        const result = JSON.parse(requestObj.responseText).greetings.find(
+                            (item) => {
+                                // console.log(user);
+                                //return item.userName === user.userName; //?????????????????
+                                // if(item.user === user) return items.greetings
+                                return item.userName === user;
+                            }
+                        );
+                        if (result) {
+                            onSuccess(result);
+                        } else {
+                            onError(new Error("no greetings"));
+                        }
+                    }
+                };
+                requestObj.send();
+            }
+        }
+
+
+        const userStorage = new UserStorage();
+
+        const userName = prompt("이름을 입력하세요.");
+        const userPassword = prompt("비밀번호를 입력하세요.");
+
+        userStorage.searchUser(
+            userName,
+            userPassword,
+            (name) => {
+                userStorage.sayHi(
+                    name,
+                    (result) => {
+                        alert(
+                            `당신에게 인사합니다! ${result.userName}님 ${result.greetings}`
+                        );
+                    },
+                    (error) => {
+                        console.log(error);
+                    }
+                );
+            },
+            (error) => {
+                console.log(error);
+            }
+        );  // 콜백 지옥....😈
+    </script>
+</body>
+
+</html>

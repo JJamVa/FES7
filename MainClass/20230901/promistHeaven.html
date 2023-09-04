@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      const orderCoffee = new Promise((resolve, reject) => {
+        // resolve나 reject는 함수임.
+        // promise는 약속을 이행한 상태(resolve)나, 약속을 못지킨 상태(reject)를 반환
+        // 콜백함수 실행. Promise는 결과 객체 반환
+        const requestObj = new XMLHttpRequest();
+        requestObj.open("GET", "orderCoffee.txt");
+        requestObj.onreadystatechange = () => {
+          if (requestObj.readyState === 4) {
+            if (requestObj.status === 200) {
+              // 통신이 성공했지만, 우리가 원하는 데이터가 안들어왔을 수도 있기에.
+              const result = requestObj.responseText;
+              resolve(result); //  약속이 이행된 상태.
+            } else {
+              // 반드시 통신을 실패했을때의 예외처리를 해주어야함.
+              // 예외 상황이 너무 많기에 반드시!!!!!!!!!!!!!!!
+              // 실패 예외처리를 해주자.
+              reject(
+                new Error(
+                  `오늘의 커피원두가 다 떨어졌습니다. ${requestObj.status}`
+                )
+              ); // status까지 넣어서 왜 실패했는지 보여줌.
+            }
+          }
+        };
+        requestObj.send();
+      });
+      console.log(orderCoffee);
+      // pending : 대기중인 상태
+      // fulfilled : 약속이 이행된 상태
+      // 통신중인 상태
+
+      // 한번 더 orderCoffee를 찍어보면 pending 상태가 나오지 않음.
+      // new Promise를 통해 처리하는 것은 데이터 가져오기
+      // 한번 더찍었을때는 이미 통신이 끝난 상태이기에. (비동기)
+
+      // orderCoffee는 Promise객체를 가지고 있음.
+      orderCoffee
+        .then((asyncResult) => {
+          // resolve(22번째줄)가 실행되야 then이 실행됨. ( = 통신 성공해야 then이 실행됨)
+          // resolve가 실행되면 인자 result가 then의 인자로 넘어감,
+          // resolve와 then은 페어로 움직인다.
+
+          console.log(asyncResult);
+        })
+        .catch(() => {
+          // catch는 reject와 페어로 움직임
+          console.log(error);
+        });
+      // 콜백 지옥에 빠지지않고 분리 가능.
+      // 통신의 결과값이 밖에서 사용가능
+      // 마치 동기적으로 작동하는 것처럼, 하지만 비동기지롱
+      // Promise는 비동기 코드를 동기적으로 작동하는것처럼 보여지게 하기 위해 개발됨.
+      // 콜백지옥보다 보기 훨씬 편함.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+
+        const ordercoffee = new Promise((resolve,reject) => {
+            const requestObj = new XMLHttpRequest();
+            requestObj.open('GET', 'orderCoffee.txt')//뭐를열지 무슨방식으로 할지 작성
+            requestObj.onreadystatechange = () => {
+                if (requestObj.readyState === 4) {
+                    if (requestObj.status === 200) {// Ajax는 통신에 대한 예외처리는 필수
+                        const result = requestObj.responseText
+                        resolve(result)
+                    } else {
+                        reject(new Error(`주문이 실패되었습니다. ${requestObj.status}`))
+                    }
+                }
+            };
+            requestObj.send();
+        })
+        
+
+        ordercoffee.then((asyncResult) => {
+            console.log(asyncResult);
+        }).catch((error) => {
+            console.log(error)
+        })
+    </script>
+</body>
+
+</html>

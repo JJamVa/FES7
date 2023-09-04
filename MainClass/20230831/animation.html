@@ -7,23 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            margin: 100px;
-        }
-
-        .target {
+        div {
             width: 50px;
             height: 50px;
-            background-color: pink;
+            background-color: slateblue;
         }
     </style>
 </head>
 
 <body>
-    <div class="target"></div>
+    <div></div>
     <script>
-        const target = document.querySelector('.target');
-        let pos = 0;
+        const move = document.querySelector('div');
+        let position_X = 0;
+        let position_Y = 0;
 
         // document.addEventListener('keydown', move);
 
@@ -38,34 +35,25 @@
         //     }
         // }
 
-        let keys = "";
+        let direction = ""
 
-        function move(event) {
-            keys = event.key;
+        window.addEventListener("keydown", (e) => {
+            direction = e.key
+            console.log(direction)
+        })
+        window.addEventListener("keyup", (e) => {
+            direction = ""
+        })
+
+        function moving(){
+            if(direction === "ArrowRight") position_X += 10
+            else if(direction === "ArrowLeft") position_X -= 10
+            else if(direction === "ArrowUp") position_Y -= 10;
+            else if(direction === "ArrowDown") position_Y += 10;
+            move.style.transform = `translate(${position_X}px, ${position_Y}px)`
+            requestAnimationFrame(moving)
         }
-
-        function stop() {
-            keys = "";
-        }
-
-        document.addEventListener('keydown', move);
-        document.addEventListener('keyup', stop);
-
-        function play() {
-            switch (keys) {
-                case "ArrowRight":
-                    pos += 5;
-                    target.style.transform = `translate(${pos}px)`;
-                    break;
-                case "ArrowLeft":
-                    pos -= 5;
-                    target.style.transform = `translate(${pos}px)`;
-                    break;
-            }
-            requestAnimationFrame(play);
-        }
-
-        requestAnimationFrame(play);
+        requestAnimationFrame(moving)
     </script>
 </body>
 
