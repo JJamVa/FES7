@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        class UserStorage {
+            async userInfo(userName, password) {
+                try {
+                    let response_data = await fetch('users.json')
+                    if(!response_data.ok) throw new Error("HTTP Status Error :", response.status)
+                    let data = await response_data.json()
+                    const result = await data.user.find((item) => item.userName === userName && item.password === password)
+                    if(!result) throw new Error("유저가 존재하지 않습니다.")
+                    return result.userName;
+                } catch (error) {
+                    console.error("User Not Found " + error);
+                    throw error
+                }
+            }
+
+            async greeting(user) {
+                try {
+                    let response_data = await fetch('greetings.json')
+                    if (!response_data.ok) throw new Error("HTTP Status ERROR :", response_data.status)
+                    let data = await response_data.json()
+                    const result = await data.greetings.find((item) => item.userName === user);
+                    if(!result) throw new Error("유저의 인사말이 없습니다.")
+                    return result.greetings;
+                }
+                catch (error) {
+                    console.error("User's Greeting Not Found ", error);
+                    throw error
+                }
+            }
+        }
+
+
+        const userStorage = new UserStorage();
+
+        const userName = "Hello"
+        const password = "World"
+
+        async function userGreeting() {
+            try {
+                let user = await userStorage.userInfo(userName, password)
+                let greetings = await userStorage.greeting(user)
+                alert(`${user}님 ${greetings}`);
+            } catch (error) {
+                console.error("Error", error);
+            }
+        }
+        userGreeting();
+
+    </script>
+</body>
+
+</html>
