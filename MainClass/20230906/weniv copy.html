@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        fetch('http://test.api.weniv.co.kr/mall').then((response) => {
+            return response.json();
+        }).then((data) => {
+            const Card = (props) => {
+                const url = 'http://test.api.weniv.co.kr/' + props.goods.thumbnailImg
+                return (
+                    <li className="product-item">
+                        <div className="product-img">
+                            <img src={url} alt="" />
+                        </div>
+                        <strong className="product-name sl-ellipsis">
+                            {props.goods.productName}
+                        </strong>
+                        <button className="like-btn"></button>
+                        <div className="product-price">
+                            <strong className="price m-price">{props.goods.price}
+                                <span>원</span></strong>
+                        </div>
+                    </li>
+                )
+            }
+
+            const Product = (props) => {
+                return (
+                    <main>
+                        <div>
+                            <Card goods={props.items[0]} />
+                            <Card goods={props.items[1]} />
+                            <Card goods={props.items[2]} />
+                            <Card goods={props.items[3]} />
+                            <Card goods={props.items[4]} />
+                            <Card goods={props.items[5]} />
+                            <Card goods={props.items[6]} />
+                        </div>
+                    </main>
+                )
+            }
+
+            const body = (
+                <div>
+                    <Product items={data} />
+                </div>
+            )
+
+            const root = ReactDOM.createRoot(document.querySelector("#root"))
+            root.render(body);
+        })
+        .catch((error) => console.log(error))
+    </script>
+</body>
+
+</html>

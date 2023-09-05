@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    function Header(props) {
+        console.log(props)
+        return (
+            <div>Header
+                <div>menu</div>
+                <div>{props.menuOne}</div>
+                <div>{props.menuTwo}</div>
+            </div>
+        )
+    }
+
+    function 로그아웃() {
+            return <button>로그아웃</button>
+        }
+
+        function 로그인() {
+            return (
+                <div>
+                    <input type="text" />
+                    <input type="password" />
+                    <button>로그인</button>
+                </div>
+            )
+        }
+
+    const login = false;
+    const body = (
+        <div>
+            {/*Header('about', 'blank')*/}
+            <Header menuOne="about" menuTwo='blank'/>
+            {login ? <로그아웃/> : <로그인/>}
+        </div>
+    )
+
+    const root = ReactDOM.createRoot(document.querySelector("#root"))
+    root.render(body);
+</script>
+
+</html>

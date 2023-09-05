@@ -19,14 +19,15 @@ class ColaGenerator {
         }
     }
 
-    colaFactory(data) {
+    async colaFactory(data) {
         const docFrag = new DocumentFragment();
         [...data].forEach((e) => {
             const item = document.createElement('li');
-            const itemTemplate = `<button type="button" class="btn-cola on">
-                                <img src="./img/cola-original.png" alt="" />
-                                <span class="cola-name">Original_Cola</span>
-                                <strong class="cola-price">1000원</strong>
+            const itemTemplate = `<button type="button" class="btn-cola on" data-item=${e.name}
+                                    data-img=${e.img} data-count=${e.count} data-price=${e.cost}>
+                                <img src="./img/${e.img}" alt="" />
+                                <span class="cola-name">${e.name}</span>
+                                <strong class="cola-price">${e.cost}원</strong>
                                     </button>`
             item.innerHTML = itemTemplate;
             docFrag.append(item)
