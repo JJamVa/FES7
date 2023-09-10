@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <h1>React 연습</h1>
+    <p>버튼을 눌러주세요!</p>
+    <div id="root"></div>
+    <script type="text/babel">
+        const el = React.createElement;
+
+        class Greeting extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = { bool: false };
+            }
+
+            render() {
+                if (this.state.bool) {
+                    return (
+                        <strong> 만나서 반갑습니다! </strong>
+                    );
+                }
+
+                return (
+                    <button onClick={() => this.setState({ bool: true })}>
+                        Touch This!!!
+                    </button>
+                );
+            }
+        }
+
+        const domContainer = document.querySelector('#root');
+        const root = ReactDOM.createRoot(domContainer);
+        root.render(el(Greeting));
+    </script>
+</body>
+
+</html>

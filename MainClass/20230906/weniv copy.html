@@ -14,9 +14,11 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        fetch('http://test.api.weniv.co.kr/mall').then((response) => {
+        fetch('http://test.api.weniv.co.kr/mall')
+        .then((response) => {
             return response.json();
-        }).then((data) => {
+        })
+        .then((data) => {
             const Card = (props) => {
                 const url = 'http://test.api.weniv.co.kr/' + props.goods.thumbnailImg
                 return (
@@ -58,7 +60,7 @@
                 </div>
             )
 
-            const root = ReactDOM.createRoot(document.querySelector("#root"))
+            const root = ReactDOM.createRoot(document.querySelector("#root"));
             root.render(body);
         })
         .catch((error) => console.log(error))
