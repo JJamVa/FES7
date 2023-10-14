@@ -112,17 +112,17 @@ button:not(:disabled) {
 
 @media (min-width: 541px) {
   .hello::after {
-      content: "|";
-      color: #d8ddde;
-      margin-left: 24px;
+    content: "|";
+    color: #d8ddde;
+    margin-left: 24px;
   }
 }
 
 @media (max-width: 540px) {
   .hello {
-      position: absolute;
-      top: 140px;
-      right: 34px;
+    position: absolute;
+    top: 140px;
+    right: 34px;
   }
 }
 
@@ -144,8 +144,8 @@ button:not(:disabled) {
 
 @keyframes heart {
   to {
-      stroke: #ffc7d1;
-      stroke-width: 2px;
-      transform: scale(3);
+    stroke: #ffc7d1;
+    stroke-width: 2px;
+    transform: scale(3);
   }
 }

@@ -1,11 +1,7 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-import { getFirestore } from 'firebase/firestore'
-import { getAuth } from 'firebase/auth'
+import { getFirestore, Timestamp } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -17,11 +13,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 // firestore 초기화
 const appFireStore = getFirestore(app);
-
-//인증 초기화
+// 인증 초기화
 const appAuth = getAuth();
 
-export { appFireStore, appAuth }
+const timestamp = Timestamp;
+
+export { appFireStore, appAuth, timestamp } 
